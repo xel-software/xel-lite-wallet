@@ -1230,7 +1230,7 @@ public final class Peers {
 
     private static void checkBlockchainState() {
         Peer.BlockchainState state = Constants.isLightClient ? Peer.BlockchainState.LIGHT_CLIENT :
-                (Nxt.getBlockchainProcessor().isDownloading() || Nxt.getBlockchain().getLastBlockTimestamp() < Nxt.getEpochTime() - 600) ? Peer.BlockchainState.DOWNLOADING :
+                (Nxt.getBlockchainProcessor().isDownloading()) ? Peer.BlockchainState.DOWNLOADING :
                         (Nxt.getBlockchain().getLastBlock().getTimestamp() < Nxt.getEpochTime() - (4*60*60) && !Constants.isTestnet) ? Peer.BlockchainState.FORK :
                         Peer.BlockchainState.UP_TO_DATE;
         if (state != currentBlockchainState) {
