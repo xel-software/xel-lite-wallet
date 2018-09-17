@@ -48,8 +48,8 @@ import java.util.Properties;
 
 public final class Nxt {
 
-    public static final String VERSION = "3.1.1";
-    public static final String APPLICATION = "Elastic";
+    public static final String VERSION = "3.1.2";
+    public static final String APPLICATION = "XEL (Longhorn)";
 
     private static volatile Time time = new Time.EpochTime();
 
@@ -65,7 +65,7 @@ public final class Nxt {
     static {
         redirectSystemStreams("out");
         redirectSystemStreams("err");
-        System.out.println("Initializing Nxt server version " + Nxt.VERSION);
+        System.out.println("Initializing XEL server version " + Nxt.VERSION);
         printCommandLineArguments();
         runtimeMode = RuntimeEnvironment.getRuntimeMode();
         System.out.printf("Runtime mode %s\n", runtimeMode.getClass().getName());
