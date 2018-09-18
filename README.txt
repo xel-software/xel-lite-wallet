@@ -113,10 +113,10 @@ http://localhost:7876/test - a list of all available http API requests, very
 useful for client developers and for anyone who wants to execute commands
 directly using the http interface without going through the browser UI.
 
-http://localhost:7876/test?requestType=<specificRequestType> - same as above,
+http://localhost:17876/test?requestType=<specificRequestType> - same as above,
 but only shows the form for the request type specified.
 
-http://localhost:7876/doc - a javadoc documentation for client developers who
+http://localhost:17876/doc - a javadoc documentation for client developers who
 want to use the Java API directly instead of going through the http interface.
 
 

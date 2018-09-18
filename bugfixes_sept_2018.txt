@@ -31,7 +31,7 @@ It is false to rely on the staking power to guess whether you are on a fork or n
 
 https://github.com/xel-software/Litewallet-Mainnet/commit/f9d866bc85c2122ba54ae9a5d6a16e20244acdab
 
-Which simply assume now, that when no block was found for more than an hour, a fork must have occured, splitting you off the network while the rest proceeds. Better metrics are appreciated. Everyone is encouraged to submit a suggestion or a pull request.
+Which simply assume now, that when no block was found for more than an hour, a fork must have occured, splitting you off the network while the rest proceeds. Better metrics are appreciated. Everyone is encouraged to submit a suggestion or a pull request. For high security application, it may be advised to cross check the latest blocks with other sources that you trust (other nodes of you or the block explorer)!
 
 Furthermore, in this commit:
 https://github.com/xel-software/Litewallet-Mainnet/commit/17baa92bdf1b45065311846e3f26373acfe54bef
