@@ -27,6 +27,8 @@
 /test/classes/
 *.csv
 /jre*
+/jre-win/*
+/jre-mac/*
 /dist
 deploy.sh
 /resource/nxt.manifest.mf

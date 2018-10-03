@@ -6,7 +6,7 @@
     <info>
         <appname>Elastic</appname>
         <appversion>@{runtime.nxt.version}</appversion>
-        <url>https://elasticexplorer.org</url>
+        <url>https://xel.org</url>
         <run-privileged condition="izpack.windowsinstall"/>
     </info>
 
@@ -158,19 +158,19 @@
 
         <pack name="jre.win" os="windows" required="yes" uninstall="false">
             <description>Java 64 bit for Windows</description>
-            <fileset dir="../jre" targetdir="${INSTALL_PATH}/jre" override="true"/>
+            <fileset dir="../jre-win" targetdir="${INSTALL_PATH}/jre" override="true"/>
         </pack>
 
         <pack name="server.mac" os="mac_osx" required="yes" uninstall="false">
             <description>Mac Specific Resources</description>
-            <fileset dir="resource/mac/Contents" targetdir="${INSTALL_PATH}/Contents" override="true"/>		
-			<parsable targetfile="${INSTALL_PATH}/Contents/MacOS/xel"/>
-			<executable targetfile="${INSTALL_PATH}/Contents/MacOS/xel"/>		
-		</pack>
+            <fileset dir="resource/mac/Contents" targetdir="${INSTALL_PATH}/Contents" override="true"/>
+      			<parsable targetfile="${INSTALL_PATH}/Contents/MacOS/xel"/>
+      			<executable targetfile="${INSTALL_PATH}/Contents/MacOS/xel"/>
+    		</pack>
 
         <pack name="jre.mac" os="mac_osx" required="yes" uninstall="false">
             <description>Java 64 bit for Mac</description>
-            <fileset dir="../jre" targetdir="${INSTALL_PATH}/jre" override="true"/>
+            <fileset dir="../jre-mac" targetdir="${INSTALL_PATH}/jre" override="true"/>
             <executable targetfile="${INSTALL_PATH}/jre/bin/java" failure="warn" keep="true"/>
         </pack>
 

@@ -8,13 +8,13 @@ FIRST PREPARATION (ONLY DONE ONCE)
 5. Install Cygwin with at least "zip", "unzip", "dos2unix" and the "python2" and "python2-pip" packages. All selectable in the cygwin setup, if you cant find them make sure to set the View from "Pending" to "Not Installed"!
 6. Get a cup of coffee and enjoy your 5 minute break
 7. Checkout the Litewallet
-8. Create a folder called "jre" in the Litewallet-Mainnet/ root folder. Also create a "jre-macosx" folder which will remain empty.
-9. Download 64bit JRE 1.8 from Sun in .tar.gz format (for Windows: jre-8u131-windows-x64.tar.gz) and unzip the content of jre1.8.0_181\ into the jre/ folder you just created. In a way that you
+8. Create a folder called "jre-win" in the Litewallet-Mainnet/ root folder. Also create a "jre-mac" folder which will remain empty.
+9. Download 64bit JRE 1.8 from Sun in .tar.gz format (for Windows: jre-8u131-windows-x64.tar.gz) and unzip the content of jre1.8.0_181\ into the jre-win/ folder you just created. In a way that you
 
 DO NOT HAVE:
-jre\jre1.8.0_181\bin or jre\jre1.8.0_181\lib
+jre-win\jre1.8.0_181\bin or jre-win\jre1.8.0_181\lib
 BUT INSTEAD YOU HAVE
-jre\bin\ or jre\lib\
+jre-win\bin\ or jre-win\lib\
 
 REPEATED STEP FOR EVERY NEW VERSION
 ===================================
