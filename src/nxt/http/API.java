@@ -388,7 +388,6 @@ public final class API {
     }
 
     static boolean isAllowed(String remoteHost) {
-        Logger.logMessage("Connection from host " + remoteHost);
         if (API.allowedBotHosts == null || API.allowedBotHosts.contains(remoteHost)) {
             return true;
         }

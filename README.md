@@ -66,6 +66,6 @@ XEL is a decentralized supercomputer based on cryptography and blockchain techno
     - OPERATORS-GUIDE.md
 
   - on the forums:
-    - talk.elasticexplorer.org
+    - https://discord.gg/5YhuSzd
 
 ----

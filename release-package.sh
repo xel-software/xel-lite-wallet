@@ -96,25 +96,25 @@ rm -f ${PACKAGE}.jar
 echo creating change log ${CHANGELOG}
 echo "Release $1" > ${CHANGELOG}
 echo >> ${CHANGELOG}
-echo "https://github.com/unvo1d/Elastic-XEL-Litewallet/raw/master/releases/${PACKAGE}.zip" >> ${CHANGELOG}
+echo "https://github.com/xel-software/Litewallet-Mainnet/raw/master/releases/${PACKAGE}.zip" >> ${CHANGELOG}
 echo >> ${CHANGELOG}
 echo "sha256:" >> ${CHANGELOG}
 echo >> ${CHANGELOG}
 sha256sum ${PACKAGE}.zip >> ${CHANGELOG}
 
 echo >> ${CHANGELOG}
-echo "https://github.com/unvo1d/Elastic-XEL-Litewallet/raw/master/releases/${PACKAGE}.sh" >> ${CHANGELOG}
+echo "https://github.com/xel-software/Litewallet-Mainnet/raw/master/releases/${PACKAGE}.sh" >> ${CHANGELOG}
 echo >> ${CHANGELOG}
 echo "sha256:" >> ${CHANGELOG}
 echo >> ${CHANGELOG}
 sha256sum ${PACKAGE}.sh >> ${CHANGELOG}
 
 echo >> ${CHANGELOG}
-echo "https://github.com/unvo1d/Elastic-XEL-Litewallet/raw/master/releases/${PACKAGE}.exe" >> ${CHANGELOG}
+echo "https://github.com/xel-software/Litewallet-Mainnet/raw/master/releases/${PACKAGE}.exe" >> ${CHANGELOG}
 echo >> ${CHANGELOG}
 #echo "sha256:" >> ${CHANGELOG}
 #sha256sum ${PACKAGE}.exe >> ${CHANGELOG}
-echo "https://github.com/unvo1d/Elastic-XEL-Litewallet/raw/master/releases/elastic-installer-${VERSION}.dmg" >> ${CHANGELOG}
+echo "https://github.com/xel-software/Litewallet-Mainnet/raw/master/releases/elastic-installer-${VERSION}.dmg" >> ${CHANGELOG}
 echo >> ${CHANGELOG}
 
 echo "The exe, dmg, and sh packages must have a digital signature by \"Stichting XEL\"." >> ${CHANGELOG}
