@@ -11,6 +11,7 @@
 /html/**/*.gz
 /keystore
 /nxt.jar
+/nxt/*
 /nxtservice.jar
 /elastic.jar
 /elasticservice.jar
