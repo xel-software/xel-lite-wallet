@@ -12,6 +12,8 @@
 /keystore
 /nxt.jar
 /nxtservice.jar
+/elastic.jar
+/elasticservice.jar
 /program.jar
 /elastic-client*
 /nxt_test_db
@@ -33,6 +35,8 @@ deploy.sh
 /resource/elasticservice.manifest.mf
 /nxt.exe
 /nxtservice.exe
+/elastic.exe
+/elasticservice.exe
 /bundles
 *.patch
 /addons/classes/
