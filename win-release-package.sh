@@ -58,7 +58,7 @@ do
 done
 cd nxt
 echo generate jar files
-../jar.sh
+../win-jar.sh
 echo package installer Jar
 ../installer/build-installer.sh ../${PACKAGE}
 echo create installer exe
