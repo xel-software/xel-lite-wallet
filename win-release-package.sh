@@ -58,7 +58,7 @@ do
 done
 cd nxt
 echo generate jar files
-../jar.sh
+../win-jar.sh
 echo package installer Jar
 ../installer/build-installer.sh ../${PACKAGE}
 echo create installer exe
@@ -70,11 +70,11 @@ rm -rf nxt
 
 echo creating change log ${CHANGELOG}
 echo -e "Release $1\n" > ${CHANGELOG}
-echo -e "https://github.com/unvo1d/Elastic-XEL-Litewallet/raw/master/releases/${PACKAGE}.exe\n" >> ${CHANGELOG}
+echo -e "https://github.com/xel-software/Litewallet-Mainnet/raw/master/releases/${PACKAGE}.exe\n" >> ${CHANGELOG}
 echo -e "sha256:\n" >> ${CHANGELOG}
 sha256sum ${PACKAGE}.exe >> ${CHANGELOG}
 
-echo -e "https://github.com/unvo1d/Elastic-XEL-Litewallet/raw/master/releases/${PACKAGE}.jar\n" >> ${CHANGELOG}
+echo -e "https://github.com/xel-software/Litewallet-Mainnet/raw/master/releases/${PACKAGE}.jar\n" >> ${CHANGELOG}
 echo -e "sha256:\n" >> ${CHANGELOG}
 sha256sum ${PACKAGE}.jar >> ${CHANGELOG}
 

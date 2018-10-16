@@ -26,7 +26,7 @@
         <value name="HelpLink"
                keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME"
                root="HKLM"
-               string="https://elasticexplorer.org"/>
+               string="https://xel.org"/>
         <value name="URLInfoAbout"
                keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME"
                root="HKLM"
@@ -45,4 +45,3 @@
                string="$APP_VER"/>
     </pack>
 </registry>
-

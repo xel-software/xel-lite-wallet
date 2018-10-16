@@ -146,7 +146,7 @@ var NRS = (function(NRS, $) {
             return;
         }
         var filename = bundle.prefix + NRS.downloadedVersion.versionNr + "." + bundle.ext;
-        var fileurl = "https://bitbucket.org/JeanLucPicard/nxt/downloads/" + filename;
+        var fileurl = "https://github.com/xel-software/Litewallet-Mainnet/raw/master/releases/" + filename;
         var nrsUpdateExplanation = $("#nrs_update_explanation");
         if (window.java !== undefined) {
             window.java.popupHandlerURLChange(fileurl);
@@ -185,7 +185,7 @@ var NRS = (function(NRS, $) {
 
 		return false;
 	};
-	
+
     // Get latest version number and hash of version specified by the alias
     function getVersionInfo(callback) {
 		var aliasName = bundles[index].alias;

@@ -30,7 +30,7 @@ supported.
 The initialization takes a few seconds. When it is ready, you should see the
 message "Nxt server 1.x.x started successfully" in the console log. If run in
 desktop mode, a JavaFX window will open automatically. Otherwise, open a
-browser, without stopping the java process, and go to http://localhost:7876 ,
+browser, without stopping the java process, and go to http://localhost:17876 ,
 where the Nxt UI should now be available.
 
 To stop the application, type Ctrl-C inside the console window, or use the
@@ -79,12 +79,12 @@ close the browser but keep the java process running. If you want to keep
 forging, make sure you do not click on "stop forging" when logging out. You can
 also just close the browser without logging out.
 
-The java process communicates with peers on port 7874 tcp by default. If you are
+The java process communicates with peers on port 17874 tcp by default. If you are
 behind a router or a firewall and want to have your node accept incoming peer
 connections, you should setup port forwarding. The server will still work though
 even if only outgoing connections are allowed, so opening this port is optional.
 
-The user interface is available on port 7876. This port also accepts http API
+The user interface is available on port 17876. This port also accepts http API
 requests which other Nxt client applications could use.
 
 The blockchain is stored on disk using the H2 embedded database, inside the
@@ -106,10 +106,10 @@ which you see in the console window, but also to a file nxt.log, which gets
 overwritten at restart. In case of an error, the nxt.log file may contain
 helpful information, so include its contents when submitting a bug report.
 
-In addition to the default user interface at http://localhost:7876 , the
+In addition to the default user interface at http://localhost:17876 , the
 following urls are available:
 
-http://localhost:7876/test - a list of all available http API requests, very
+http://localhost:17876/test - a list of all available http API requests, very
 useful for client developers and for anyone who wants to execute commands
 directly using the http interface without going through the browser UI.
 
@@ -128,4 +128,3 @@ under the classes subdirectory, which is already in the classpath used by the
 run.sh startup script. The compiled class files can optionally be packaged in a
 nxt.jar file using the enclosed jar.sh script, and then nxt.jar should be
 included in the classpath instead of the classes subdirectory.
-
