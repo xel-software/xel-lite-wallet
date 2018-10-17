@@ -1,5 +1,5 @@
 	@echo off
-	if exist jre ( 
+	if exist jre (
 		set "javaDir=jre"
 		goto startJava
 	)
@@ -56,8 +56,8 @@
 		echo using Java home directory "%javaDir%"
 	)
 
-:startJava	
-	start "RUNNING" "%javaDir%\bin\java.exe" -cp classes;lib\*;conf;addons\classes;addons\lib\* -Dnxt.runtime.mode=desktop nxt.Nxt
+:startJava
+	start "RUNNING" "%javaDir%\bin\java.exe" -cp xel-lite-wallet.jar;conf -Dnxt.runtime.mode=desktop nxt.Nxt
 
-:endProcess 
+:endProcess
 	endlocal
