@@ -1,72 +1,68 @@
 ----
-# Welcome to XEL! #
+# Welcome to XEL!
 
-----
-## What is XEL? ##
 XEL is a decentralized supercomputer based on cryptography and blockchain technology.
 
 ----
-## Get it! ##
+## disclaimer
 
-  - *dependencies*:
-    - *general* - Java 8
-    - *Ubuntu* - `http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html`
-    - *Debian* - `http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html`
-    - *FreeBSD* - `pkg install openjdk8`
-
-  - *repository* - `git clone https://github.com/unvo1d/Elastic-XEL-Litewallet.git`
-  
-----
-## Run it! ##
-
-  - click on the XEL icon, or start from the command line:
-  - Unix: `./start.sh`
-  - Mac: `./run.command`
-  - Window: `run.bat`
-
-  - wait for the JavaFX wallet window to open
-  - on platforms without JavaFX, open http://localhost:17876/ in a browser
+XEL CORE / XELINE IS OPEN-SOURCE SOFTWARE RUNNING ON THE MAIN-NET BUT IS STILL CONSIDERED "BETA" AND MAY CONTAIN BUGS, SOME OF WHICH MAY HAVE SERIOUS CONSEQUENCES. WE THEREFORE DISCLAIM ANY LIABILITY OF ANY KIND FOR ANY DAMAGES WHATSOEVER RESULTING DIRECTLY OR INDIRECTLY FROM THE USE OF THIS SOFTWARE OR OF ANY DERIVATIVE WORK. USE THE SOFTWARE AND THE INFORMATION PRESENTED HERE AT OUR OWN RISK.
 
 ----
-## Compile it! ##
+## Run XEL Lite Wallet
 
-  - if necessary with: `./compile.sh`
-  - you need jdk-8 as well
+- *There is precompiled installers existing* :
+  - Windows : (in progress)
+  - Linux : (in progress)
+  - macOS : (in progress)
 
 ----
-## Improve it! ##
+## Run XEL Lite Wallet from sources
+
+### *dependencies*:
+  - Oracle Java 8 : https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+  - Maven : https://maven.apache.org/install.html
+
+### *clone the repository*
+
+`git clone https://github.com/xel-software/xel-lite-wallet.git`
+
+### *compile it*
+
+`mvn package`
+
+### *start from the command line:*
+  - Linux/macOS: `./start.sh`
+  - Windows: `run.bat`
+
+*wait for the JavaFX wallet window to open*
+*on platforms without JavaFX, open http://localhost:17876/ in a browser*
+
+----
+## Run XEL Lite Wallet from docker installer
+
+check the dedicated git project : https://github.com/xel-software/xel-installer-docker
+
+----
+## Improve it
 
   - we love **pull requests**
   - we love issues (resolved ones actually ;-) )
-  - in any case, make sure you leave **your ideas** at BitBucket
+  - in any case, make sure you leave **your ideas**
   - assist others on the issue tracker
   - **review** existing code and pull requests
-  - cf. coding guidelines in DEVELOPERS-GUIDE.md
 
 ----
-## Troubleshooting the NRS (XEL Reference Software) ##
+## Troubleshooting (XEL Reference Software)
 
-  - How to Stop the NRS Server?
-    - click on Nxt Stop icon, or run `./stop.sh`
+  - How to Stop the XEL Server?
+    - click on XEL Stop icon, or run `./stop.sh`
     - or if started from command line, ctrl+c or close the console window
 
   - UI Errors or Stacktraces?
     - report on github
 
-  - Permissions Denied?
-    - no spaces and only latin characters in the path to the NRS installation directory
-    - known jetty issue
-
 ----
-## Further Reading ##
+## Further Reading
 
-  - in this repository:
-    - USERS-GUIDE.md
-    - DEVELOPERS-GUIDE.md
-    - OPERATORS-GUIDE.md
-
-  - on the forums:
-    - talk.elasticexplorer.org
-    
-----
-
+  - on discord : https://discord.gg/5YhuSzd

@@ -1340,7 +1340,7 @@ NRS.addPagination = function () {
                         if (NRS.downloadingBlockchain) {
                             message += "<br/><br/>" + NRS.blockchainDownloadingMessage();
                         }
-                        
+
                     }
                     $("#dashboard_message").addClass("alert-success").removeClass("alert-danger").html(message).show();
                 }
@@ -1689,11 +1689,11 @@ NRS.addPagination = function () {
 				});
 			}
 
-            if (!NRS.state.isLightClient && NRS.blocks && NRS.blocks.length > 0 && (NRS.blocks[0].timestamp < (NRS.toEpochTime() - (60*60))) && !NRS.isTestNet) {
-                $.growl($.t("fork_warning_base_target"), {
-                    "type": "danger"
-                });
-            }
+      if (!NRS.state.isLightClient && NRS.blocks && NRS.blocks.length > 0 && (NRS.blocks[0].timestamp < (NRS.toEpochTime() - (60*60))) && !NRS.isTestNet) {
+          $.growl($.t("fork_warning_base_target"), {
+              "type": "danger"
+          });
+      }
 		}
 	};
 

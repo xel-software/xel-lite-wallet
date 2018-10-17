@@ -1,4 +1,9 @@
 #!/bin/sh
+if [ ! -f xel-lite-wallet.jar ]; then
+    echo "ERROR : you need to compile the project using 'mvn package'"
+    exit 1
+fi
+
 if [ -e ~/.elastic/elastic.pid ]; then
     PID=`cat ~/.elastic/elastic.pid`
     ps -p $PID > /dev/null
@@ -17,7 +22,7 @@ else
     JAVA=java
 fi
 echo "About to start elastic in the background, call stop.sh to stop it again"
-nohup ${JAVA} -cp classes:lib/*:conf:addons/classes:addons/lib/* -Dnxt.runtime.mode=desktop nxt.Nxt > /dev/null 2>&1 &
+nohup ${JAVA} -cp xel-lite-wallet.jar:conf -Dnxt.runtime.mode=desktop nxt.Nxt > /dev/null 2>&1 &
 
 echo $! > ~/.elastic/elastic.pid
 cd - > /dev/null
