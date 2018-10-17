@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <updateDescriptor baseUrl="">
-  <entry targetMediaFileId="67" updatableVersionMin="" updatableVersionMax="" fileName="xel-lite-wallet_macos_3_1_3-r1.dmg" newVersion="3.1.3-r1" newMediaFileId="67" fileSize="143818887" md5Sum="af2e7356d4618c6df78a2e53497cfb81" bundledJre="macosx-amd64-1.8.0_181_unpacked" archive="false" singleBundle="true">
+  <entry targetMediaFileId="67" updatableVersionMin="" updatableVersionMax="" fileName="xel-lite-wallet_macos_3_1_3-r1.dmg" newVersion="3.1.3-r1" newMediaFileId="67" fileSize="143818887" md5Sum="0802306e1c78cb65de5635bfe6f7d447" bundledJre="macosx-amd64-1.8.0_181_unpacked" archive="false" singleBundle="true">
     <comment language="en" />
   </entry>
-  <entry targetMediaFileId="70" updatableVersionMin="" updatableVersionMax="" fileName="xel-lite-wallet_windows-x64_3_1_3-r1.exe" newVersion="3.1.3-r1" newMediaFileId="70" fileSize="117515776" md5Sum="47038347e1cffb26664262feec9944e9" bundledJre="windows-amd64-1.8.0_181" archive="false" singleBundle="false">
+  <entry targetMediaFileId="70" updatableVersionMin="" updatableVersionMax="" fileName="xel-lite-wallet_windows-x64_3_1_3-r1.exe" newVersion="3.1.3-r1" newMediaFileId="70" fileSize="117515776" md5Sum="5065153ea042a4a01fbde48560788a32" bundledJre="windows-amd64-1.8.0_181" archive="false" singleBundle="false">
     <comment language="en" />
   </entry>
-  <entry targetMediaFileId="71" updatableVersionMin="" updatableVersionMax="" fileName="xel-lite-wallet_unix_3_1_3-r1.sh" newVersion="3.1.3-r1" newMediaFileId="71" fileSize="70386975" md5Sum="2206313e3f297acab02869902d9ad534" bundledJre="" archive="false" singleBundle="false">
+  <entry targetMediaFileId="71" updatableVersionMin="" updatableVersionMax="" fileName="xel-lite-wallet_unix_3_1_3-r1.sh" newVersion="3.1.3-r1" newMediaFileId="71" fileSize="70386803" md5Sum="81acb78226af38157b72329b23eb7622" bundledJre="" archive="false" singleBundle="false">
     <comment language="en" />
   </entry>
 </updateDescriptor>
