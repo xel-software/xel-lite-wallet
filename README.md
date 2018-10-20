@@ -9,36 +9,38 @@ XEL is a decentralized supercomputer based on cryptography and blockchain techno
 XEL CORE / XELINE IS OPEN-SOURCE SOFTWARE RUNNING ON THE MAIN-NET BUT IS STILL CONSIDERED "BETA" AND MAY CONTAIN BUGS, SOME OF WHICH MAY HAVE SERIOUS CONSEQUENCES. WE THEREFORE DISCLAIM ANY LIABILITY OF ANY KIND FOR ANY DAMAGES WHATSOEVER RESULTING DIRECTLY OR INDIRECTLY FROM THE USE OF THIS SOFTWARE OR OF ANY DERIVATIVE WORK. USE THE SOFTWARE AND THE INFORMATION PRESENTED HERE AT OUR OWN RISK.
 
 ----
-## Run XEL Lite Wallet from binaries
+## Run XEL Lite Wallet from binaries (***recommended for desktops***)
 
 https://github.com/xel-software/xel-lite-wallet/releases/tag/latest
 
 ----
-## Run XEL Lite Wallet from sources
+## Run XEL Lite Wallet from docker installer (***recommended for servers***)
 
-### *dependencies*:
+check the dedicated git project : https://github.com/xel-software/xel-installer-docker
+
+----
+## Run XEL Lite Wallet from sources (***recommended for advanced users***)
+
+### dependencies
   - Oracle Java 8 : https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
   - Maven : https://maven.apache.org/install.html
 
-### *clone the repository*
+### clone the repository
 
 `git clone https://github.com/xel-software/xel-lite-wallet.git`
 
-### *compile it*
+### compile it
 
 `mvn package`
 
-### *start from the command line:*
+### start from the command line:
   - Linux/macOS: `./start.sh`
   - Windows: `run.bat`
 
-*wait for the JavaFX wallet window to open*
-*on platforms without JavaFX, open http://localhost:17876/ in a browser*
+***wait for the JavaFX wallet window to open***
+***on platforms without JavaFX, open http://localhost:17876/ in a browser***
 
-----
-## Run XEL Lite Wallet from docker installer
 
-check the dedicated git project : https://github.com/xel-software/xel-installer-docker
 
 ----
 ## Improve it
