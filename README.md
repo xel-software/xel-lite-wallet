@@ -27,7 +27,8 @@ check the dedicated git project : https://github.com/xel-software/xel-installer-
 
 ### clone the repository
 
-`git clone https://github.com/xel-software/xel-lite-wallet.git`
+`git clone https://github.com/xel-software/xel-lite-wallet`
+`cd xel-lite-wallet`
 
 ### compile it
 
