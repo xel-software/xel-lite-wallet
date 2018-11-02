@@ -392,12 +392,14 @@ public final class Nxt {
                     launchDesktopApplication();
                 }
 
+                /*
                 String secretPhrase = Nxt.getStringProperty("nxt.forgingPassphrase", "", true);
                 if(secretPhrase != null && !secretPhrase.isEmpty())
                 {
                   Logger.logMessage("Start forging with the account set in nxt.forgingPassphrase...");
                   Generator.startForging(secretPhrase);
                 }
+                */
 
                 if (Constants.isTestnet) {
                     Logger.logMessage("RUNNING ON TESTNET - DO NOT USE REAL ACCOUNTS!");
