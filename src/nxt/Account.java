@@ -339,6 +339,24 @@ public final class Account {
             account.save(con);
         }
 
+        @Override
+        public void trim(int height) {
+            if (height <= Constants.GUARANTEED_BALANCE_CONFIRMATIONS) {
+                return;
+            }
+            super.trim(height);
+        }
+        @Override
+        public void checkAvailable(int height) {
+            if (height > Constants.GUARANTEED_BALANCE_CONFIRMATIONS) {
+                super.checkAvailable(height);
+                return;
+            }
+            if (height > Nxt.getBlockchain().getHeight()) {
+                throw new IllegalArgumentException("Height " + height + " exceeds blockchain height " + Nxt.getBlockchain().getHeight());
+            }
+        }
+
     };
 
     private static final DbKey.LongKeyFactory<AccountInfo> accountInfoDbKeyFactory = new DbKey.LongKeyFactory<AccountInfo>("account_id") {
@@ -415,6 +433,15 @@ public final class Account {
             publicKey.save(con);
         }
 
+        @Override
+        public void checkAvailable(int height) {
+            if (height == 0) {
+                //Effective balance at height <= 1440 requires getting the public key at height 0, so don't throw if
+                // historical data at height 0 is missing
+                return;
+            }
+            super.checkAvailable(height);
+        }
     };
 
     private static final DerivedDbTable accountGuaranteedBalanceTable = new DerivedDbTable("account_guaranteed_balance") {
