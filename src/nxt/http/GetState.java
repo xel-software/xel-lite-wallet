@@ -72,6 +72,9 @@ public final class GetState extends APIServlet.APIRequestHandler {
         if (externalAddress != null) {
             response.put("upnpExternalAddress", externalAddress.getHostAddress());
         }
+        
+        response.put("lastBlock", Long.toUnsignedString(GetLastBlockId.getLastBlock()));
+        
         return response;
     }
 

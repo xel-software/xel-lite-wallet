@@ -50,6 +50,18 @@ public class CountingOutputWriter extends FilterWriter {
     }
 
     /**
+     * Write an array of characters
+     *
+     * @param   cbuf                Characters to be written
+     * @throws  IOException         I/O error occurred
+     */
+    @Override
+    public void write(char[] cbuf) throws IOException {
+        super.write(cbuf);
+        count += cbuf.length;
+    }
+
+    /**
      * Write an array of characters starting at the specified offset
      *
      * @param   cbuf                Characters to be written
@@ -61,6 +73,18 @@ public class CountingOutputWriter extends FilterWriter {
     public void write(char[] cbuf, int off, int len) throws IOException {
         super.write(cbuf, off, len);
         count += len;
+    }
+
+    /**
+     * Write a string
+     *
+     * @param   s                   String to be written
+     * @throws  IOException         I/O error occurred
+     */
+    @Override
+    public void write(String s) throws IOException {
+        super.write(s);
+        count += s.length();
     }
 
     /**

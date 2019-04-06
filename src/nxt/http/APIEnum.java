@@ -31,7 +31,7 @@ public enum APIEnum {
     REDEEM("redeem", Redeem.instance),
     GET_UNCLAIMED_REDEEMS("getUnclaimedRedeems", GetUnclaimedRedeems.instance),
     /* ELASTIC SPECIFIC END */
-
+    GET_FROM_FAUCET("faucet", Faucet.instance),
     APPROVE_TRANSACTION("approveTransaction", ApproveTransaction.instance),
     BROADCAST_TRANSACTION("broadcastTransaction", BroadcastTransaction.instance),
     CALCULATE_FULL_HASH("calculateFullHash", CalculateFullHash.instance),

@@ -1155,7 +1155,7 @@ final class TransactionImpl implements Transaction {
                 }
             }
         }
-        AccountRestrictions.checkTransaction(this, validatingAtFinish);
+        AccountRestrictions.checkTransaction(this);
     }
 
     // returns false iff double spending
