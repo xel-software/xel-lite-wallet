@@ -16,7 +16,6 @@
 
 package nxt.http;
 
-import nxt.NxtException;
 import nxt.peer.Peer;
 import nxt.peer.Peers;
 import nxt.util.Convert;
@@ -38,7 +37,7 @@ public class SetAPIProxyPeer extends APIServlet.APIRequestHandler {
     }
 
     @Override
-    protected JSONStreamAware processRequest(HttpServletRequest request) throws NxtException {
+    protected JSONStreamAware processRequest(HttpServletRequest request) {
         String peerAddress = Convert.emptyToNull(request.getParameter("peer"));
         if (peerAddress == null) {
             Peer peer = APIProxy.getInstance().setForcedPeer(null);

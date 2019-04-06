@@ -179,6 +179,14 @@ public final class ParameterParser {
         return Convert.parseHexString(paramValue);
     }
 
+    public static String getParameter(HttpServletRequest req, String name) throws ParameterException {
+        String value = Convert.emptyToNull(req.getParameter(name));
+        if (value == null) {
+            throw new ParameterException(missing(name));
+        }
+        return value;
+    }
+
     public static long getAccountId(HttpServletRequest req, boolean isMandatory) throws ParameterException {
         return getAccountId(req, "account", isMandatory);
     }
@@ -693,8 +701,12 @@ public final class ParameterParser {
             throw new ParameterException(INCORRECT_TAGGED_DATA_CHANNEL);
         }
 
-        if (data.length == 0 || data.length > Constants.MAX_TAGGED_DATA_DATA_LENGTH) {
-            throw new ParameterException(INCORRECT_DATA);
+        if (data.length == 0) {
+            throw new ParameterException(INCORRECT_DATA_ZERO_LENGTH);
+        }
+
+        if (data.length > Constants.MAX_TAGGED_DATA_DATA_LENGTH) {
+            throw new ParameterException(INCORRECT_DATA_TOO_LONG);
         }
 
         if (filename.length() > Constants.MAX_TAGGED_DATA_FILENAME_LENGTH) {

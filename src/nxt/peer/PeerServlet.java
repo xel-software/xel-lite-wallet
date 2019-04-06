@@ -33,7 +33,6 @@ import org.json.simple.JSONStreamAware;
 import org.json.simple.JSONValue;
 import org.json.simple.parser.ParseException;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -144,11 +143,10 @@ public final class PeerServlet extends WebSocketServlet {
      *
      * @param   req                 HTTP request
      * @param   resp                HTTP response
-     * @throws  ServletException    Servlet processing error
      * @throws  IOException         I/O error
      */
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         JSONStreamAware jsonResponse;
         //
         // Process the peer request
@@ -251,7 +249,9 @@ public final class PeerServlet extends WebSocketServlet {
             jsonObject.put("cause", peer.getBlacklistingCause());
             return jsonObject;
         }
-        Peers.addPeer(peer);
+        if (Peers.getMorePeers) {
+            Peers.addPeer(peer);
+        }
         //
         // Process the request
         //

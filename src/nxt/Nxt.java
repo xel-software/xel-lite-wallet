@@ -29,11 +29,7 @@ import nxt.user.Users;
 import nxt.util.*;
 import org.json.simple.JSONObject;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintStream;
+import java.io.*;
 import java.lang.management.ManagementFactory;
 import java.net.URI;
 import java.nio.file.Files;
@@ -222,13 +218,24 @@ public final class Nxt {
     }
 
     public static String getStringProperty(String name, String defaultValue, boolean doNotLog) {
+        return getStringProperty(name, defaultValue, doNotLog, null);
+    }
+
+    public static String getStringProperty(String name, String defaultValue, boolean doNotLog, String encoding) {
         String value = properties.getProperty(name);
         if (value != null && ! "".equals(value)) {
             Logger.logMessage(name + " = \"" + (doNotLog ? "{not logged}" : value) + "\"");
-            return value;
         } else {
             Logger.logMessage(name + " not defined");
-            return defaultValue;
+            value = defaultValue;
+        }
+        if (encoding == null || value == null) {
+            return value;
+        }
+        try {
+            return new String(value.getBytes("ISO-8859-1"), encoding);
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -247,17 +254,21 @@ public final class Nxt {
         return result;
     }
 
-    public static Boolean getBooleanProperty(String name) {
+    public static boolean getBooleanProperty(String name) {
+        return getBooleanProperty(name, false);
+    }
+
+    public static boolean getBooleanProperty(String name, boolean defaultValue) {
         String value = properties.getProperty(name);
         if (Boolean.TRUE.toString().equals(value)) {
-            //Logger.logMessage(name + " = \"true\"");
+            Logger.logMessage(name + " = \"true\"");
             return true;
         } else if (Boolean.FALSE.toString().equals(value)) {
-            //Logger.logMessage(name + " = \"false\"");
+            Logger.logMessage(name + " = \"false\"");
             return false;
         }
-        //Logger.logMessage(name + " not defined, assuming false");
-        return false;
+        Logger.logMessage(name + " not defined, using default " + defaultValue);
+        return defaultValue;
     }
 
     public static Blockchain getBlockchain() {
@@ -391,16 +402,6 @@ public final class Nxt {
                 if (isDesktopApplicationEnabled()) {
                     launchDesktopApplication();
                 }
-
-                /*
-                String secretPhrase = Nxt.getStringProperty("nxt.forgingPassphrase", "", true);
-                if(secretPhrase != null && !secretPhrase.isEmpty())
-                {
-                  Logger.logMessage("Start forging with the account set in nxt.forgingPassphrase...");
-                  Generator.startForging(secretPhrase);
-                }
-                */
-
                 if (Constants.isTestnet) {
                     Logger.logMessage("RUNNING ON TESTNET - DO NOT USE REAL ACCOUNTS!");
                 }

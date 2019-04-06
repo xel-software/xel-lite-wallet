@@ -65,8 +65,8 @@ public class AccountLedger {
     /** Pending ledger entries */
     private static final List<LedgerEntry> pendingEntries = new ArrayList<>();
 
-    /**
-     * Process nxt.ledgerAccounts
+    /*
+      Process nxt.ledgerAccounts
      */
     static {
         List<String> ledgerAccounts = Nxt.getStringListProperty("nxt.ledgerAccounts");
@@ -127,10 +127,13 @@ public class AccountLedger {
             if (trimKeep <= 0)
                 return;
             try (Connection con = db.getConnection();
-                 PreparedStatement pstmt = con.prepareStatement("DELETE FROM account_ledger WHERE height <= ?")) {
-                int trimHeight = Math.max(blockchain.getHeight() - trimKeep, 0);
-                pstmt.setInt(1, trimHeight);
-                pstmt.executeUpdate();
+                 PreparedStatement pstmt = con.prepareStatement("DELETE FROM account_ledger WHERE height <= ? LIMIT " + Constants.BATCH_COMMIT_SIZE)) {
+                pstmt.setInt(1, Math.max(blockchain.getHeight() - trimKeep, 0));
+                int trimmed;
+                do {
+                    trimmed = pstmt.executeUpdate();
+                    Db.db.commitTransaction();
+                } while (trimmed >= Constants.BATCH_COMMIT_SIZE);
             } catch (SQLException e) {
                 throw new RuntimeException(e.toString(), e);
             }
@@ -203,7 +206,7 @@ public class AccountLedger {
         if (!isUnconfirmed && logUnconfirmed == 2) {
             return false;
         }
-        if (trimKeep > 0 && blockchain.getHeight() < Constants.LAST_KNOWN_BLOCK - trimKeep) {
+        if (trimKeep > 0 && blockchain.getHeight() <= Constants.LAST_KNOWN_BLOCK - trimKeep) {
             return false;
         }
         //
@@ -255,6 +258,7 @@ public class AccountLedger {
      * Commit pending ledger entries
      */
     static void commitEntries() {
+        int count = 0;
         for (LedgerEntry ledgerEntry : pendingEntries) {
             accountLedgerTable.insert(ledgerEntry);
             listeners.notify(ledgerEntry, Event.ADD_ENTRY);

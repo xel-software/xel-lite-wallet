@@ -234,6 +234,9 @@ final class BlockDb {
             BigInteger cumulativeDifficulty = new BigInteger(rs.getBytes("cumulative_difficulty"));
             long baseTarget = rs.getLong("base_target");
             long nextBlockId = rs.getLong("next_block_id");
+            //if (nextBlockId == 0 && !rs.wasNull()) {
+            //    throw new IllegalStateException("Attempting to load invalid block");
+            //}
             int height = rs.getInt("height");
             byte[] generationSignature = rs.getBytes("generation_signature");
             byte[] blockSignature = rs.getBytes("block_signature");

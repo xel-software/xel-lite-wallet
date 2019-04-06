@@ -16,7 +16,6 @@
 
 package nxt.http;
 
-import nxt.NxtException;
 import nxt.peer.Peer;
 import nxt.peer.Peers;
 import nxt.util.Convert;
@@ -37,7 +36,7 @@ public class BlacklistAPIProxyPeer extends APIServlet.APIRequestHandler {
     }
 
     @Override
-    protected JSONStreamAware processRequest(HttpServletRequest request) throws NxtException {
+    protected JSONStreamAware processRequest(HttpServletRequest request) {
         String peerAddress = Convert.emptyToNull(request.getParameter("peer"));
         if (peerAddress == null) {
             return MISSING_PEER;
@@ -47,8 +46,7 @@ public class BlacklistAPIProxyPeer extends APIServlet.APIRequestHandler {
         if (peer == null) {
             return UNKNOWN_PEER;
         } else {
-            APIProxy.getInstance().blacklistHost(peer.getHost());
-            response.put("done", true);
+            response.put("done", APIProxy.getInstance().blacklistHost(peer.getHost()));
         }
 
         return response;

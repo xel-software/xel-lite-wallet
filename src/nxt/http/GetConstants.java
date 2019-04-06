@@ -58,7 +58,12 @@ public final class GetConstants extends APIServlet.APIRequestHandler {
                     JSONObject typeJSON = new JSONObject();
                     JSONObject subtypesJSON = new JSONObject();
                     for (int subtype = 0; ; subtype++) {
-                        TransactionType transactionType = TransactionType.findTransactionType((byte) type, (byte) subtype);
+                        TransactionType transactionType;
+                        try {
+                            transactionType = TransactionType.findTransactionType((byte) type, (byte) subtype);
+                        } catch (IllegalArgumentException ignore) {
+                            continue;
+                        }
                         if (transactionType == null) {
                             if (subtype == 0) {
                                 break outer;
@@ -153,6 +158,8 @@ public final class GetConstants extends APIServlet.APIRequestHandler {
                 JSONArray notForwardedRequests = new JSONArray();
                 notForwardedRequests.addAll(APIProxy.NOT_FORWARDED_REQUESTS);
                 response.put("proxyNotForwardedRequests", notForwardedRequests);
+
+                response.put("initialBaseTarget", Long.toUnsignedString(Constants.INITIAL_BASE_TARGET));
 
                 CONSTANTS = JSON.prepare(response);
             } catch (Exception e) {

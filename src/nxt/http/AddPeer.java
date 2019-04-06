@@ -16,7 +16,6 @@
 
 package nxt.http;
 
-import nxt.NxtException;
 import nxt.http.APIServlet.APIRequestHandler;
 import nxt.peer.Peer;
 import nxt.peer.Peers;
@@ -37,8 +36,7 @@ public class AddPeer extends APIRequestHandler {
     }
 
     @Override
-    protected JSONStreamAware processRequest(HttpServletRequest request)
-            throws NxtException {
+    protected JSONStreamAware processRequest(HttpServletRequest request) {
         String peerAddress = Convert.emptyToNull(request.getParameter("peer"));
         if (peerAddress == null) {
             return MISSING_PEER;

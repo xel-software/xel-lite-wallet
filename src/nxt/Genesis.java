@@ -22,6 +22,7 @@ public final class Genesis {
 
 
     /* VOLATILE PART BEGIN */
+    //public static final long EPOCH_BEGINNING;
     public static final byte[] CREATOR_PUBLIC_KEY = { (byte)0x1c, (byte)0x54, (byte)0x93, (byte)0xab, (byte)0xf0, (byte)0x9b, (byte)0xa9, (byte)0xe5, (byte)0x6f, (byte)0x47, (byte)0x78, (byte)0x2d, (byte)0x7c, (byte)0x8a, (byte)0x50, (byte)0xec, (byte)0xf8, (byte)0x68, (byte)0xad, (byte)0x88, (byte)0x89, (byte)0x59, (byte)0x83, (byte)0x79, (byte)0x45, (byte)0x59, (byte)0xb1, (byte)0x5b, (byte)0xbc, (byte)0x14, (byte)0x03, (byte)0x14, };
     public static final long CREATOR_ID = 7771402932088772036L;
     public static final byte[][] GENESIS_SIGNATURES = new byte[][] {

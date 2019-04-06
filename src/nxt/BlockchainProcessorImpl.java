@@ -206,6 +206,7 @@ final class BlockchainProcessorImpl implements BlockchainProcessor {
     private volatile boolean isProcessingBlock;
     private volatile boolean isRestoring;
     private volatile boolean alreadyInitialized = false;
+    private volatile long genesisBlockId;
 
     private final Runnable getMoreBlocksThread = new Runnable() {
 
@@ -306,6 +307,10 @@ final class BlockchainProcessorImpl implements BlockchainProcessor {
 
                 chainBlockIds = getBlockIdsAfterCommon(peer, commonMilestoneBlockId, false);
                 if (chainBlockIds.size() < 2 || !peerHasMore) {
+                    //if (commonMilestoneBlockId == genesisBlockId) {
+                    //    Logger.logInfoMessage(String.format("Cannot load blocks after genesis block %d from peer %s, perhaps using different Genesis block",
+                    //            commonMilestoneBlockId, peer.getAnnouncedAddress()));
+                    //}
                     return;
                 }
 
@@ -1090,6 +1095,8 @@ final class BlockchainProcessorImpl implements BlockchainProcessor {
             if (addGenesisBlock()) {
                 scan(0, false);
             } else if (Nxt.getBooleanProperty("nxt.forceScan")) {
+            //    addGenesisBlock();
+            //if (Nxt.getBooleanProperty("nxt.forceScan")) {
                 scan(0, Nxt.getBooleanProperty("nxt.forceValidate"));
             } else {
                 boolean rescan;
@@ -1205,6 +1212,11 @@ final class BlockchainProcessorImpl implements BlockchainProcessor {
     }
 
     @Override
+    public long getGenesisBlockId() {
+        return genesisBlockId;
+    }
+
+    @Override
     public void processPeerBlock(JSONObject request) throws NxtException {
         BlockImpl block = BlockImpl.parseBlock(request);
         BlockImpl lastBlock = blockchain.getLastBlock();
@@ -1252,9 +1264,10 @@ final class BlockchainProcessorImpl implements BlockchainProcessor {
                 scheduleScan(0, false);
                 //BlockDb.deleteBlock(Genesis.GENESIS_BLOCK_ID); // fails with stack overflow in H2
                 BlockDb.deleteAll();
-                if (addGenesisBlock()) {
-                    scan(0, false);
-                }
+                //if (addGenesisBlock()) {
+                //    scan(0, false);
+                //}
+                addGenesisBlock();
             } finally {
                 setGetMoreBlocks(true);
             }
@@ -1375,11 +1388,15 @@ final class BlockchainProcessorImpl implements BlockchainProcessor {
     }
 
     private boolean addGenesisBlock() {
+        //BlockImpl lastBlock = BlockDb.findLastBlock();
+        //if (lastBlock != null) {
         if (BlockDb.hasBlock(Genesis.GENESIS_BLOCK_ID, 0)) {
             Logger.logMessage("Genesis block already in database");
             BlockImpl lastBlock = BlockDb.findLastBlock();
             blockchain.setLastBlock(lastBlock);
+            //BlockDb.deleteBlocksFromHeight(lastBlock.getHeight() + 1);
             popOffTo(lastBlock);
+            //genesisBlockId = BlockDb.findBlockIdAtHeight(0);
             Logger.logMessage("Last block height: " + lastBlock.getHeight());
             return false;
         }

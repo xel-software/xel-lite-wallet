@@ -463,7 +463,7 @@ public final class Generator implements Comparable<Generator> {
         private long effectiveBalanceNXT;
         private byte[] publicKey;
 
-        public ActiveGenerator(long accountId) {
+        private ActiveGenerator(long accountId) {
             this.accountId = accountId;
             this.hitTime = Long.MAX_VALUE;
         }
@@ -516,7 +516,7 @@ public final class Generator implements Comparable<Generator> {
 
         @Override
         public int compareTo(ActiveGenerator obj) {
-            return (hitTime < obj.hitTime ? -1 : (hitTime > obj.hitTime ? 1 : 0));
+            return Long.compare(hitTime, obj.hitTime);
         }
     }
 }

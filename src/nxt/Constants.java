@@ -29,6 +29,10 @@ public final class Constants {
 
     public static final long[] FOUNDATION_MEMBER_IDS = {3977330746712865438L, -1255995780042666937L, -7945280390087411431L, 8639008863476284945L};
 
+    public static final String COIN_SYMBOL = "XEL";
+    public static final String ACCOUNT_PREFIX = "XEL";
+    public static final String PROJECT_NAME = "XEL";
+
     public static final int MAX_NUMBER_OF_TRANSACTIONS = 255;
     public static final int MIN_TRANSACTION_SIZE = 176;
     public static final int MAX_PAYLOAD_LENGTH = MAX_NUMBER_OF_TRANSACTIONS * MIN_TRANSACTION_SIZE;
@@ -51,6 +55,7 @@ public final class Constants {
     public static final int MAX_TIMEDRIFT = 15; // allow up to 15 s clock difference
     public static final int FORGING_DELAY = Nxt.getIntProperty("nxt.forgingDelay");
     public static final int FORGING_SPEEDUP = Nxt.getIntProperty("nxt.forgingSpeedup");
+    public static final int BATCH_COMMIT_SIZE = Nxt.getIntProperty("nxt.batchCommitSize", Integer.MAX_VALUE);
 
     public static final byte MAX_PHASING_VOTE_TRANSACTIONS = 10;
     public static final byte MAX_PHASING_WHITELIST_SIZE = 10;

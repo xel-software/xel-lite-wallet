@@ -16,7 +16,6 @@
 
 package nxt.http;
 
-import nxt.NxtException;
 import nxt.TaggedData;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
@@ -32,7 +31,7 @@ public final class GetDataTagCount extends APIServlet.APIRequestHandler {
     }
 
     @Override
-    protected JSONStreamAware processRequest(HttpServletRequest req) throws NxtException {
+    protected JSONStreamAware processRequest(HttpServletRequest req) {
         JSONObject response = new JSONObject();
         response.put("numberOfDataTags", TaggedData.Tag.getTagCount());
         return response;

@@ -124,6 +124,7 @@ public final class JSONResponses {
     public static final JSONStreamAware MISSING_OFFER = missing("offer");
     public static final JSONStreamAware UNKNOWN_OFFER = unknown("offer");
     public static final JSONStreamAware INCORRECT_OFFER = incorrect("offer");
+    public static final JSONStreamAware MISSING_ADMIN_PASSWORD = missing("adminPassword");
     public static final JSONStreamAware INCORRECT_ADMIN_PASSWORD = incorrect("adminPassword", "(the specified password does not match nxt.adminPassword)");
     public static final JSONStreamAware LOCKED_ADMIN_PASSWORD = incorrect("adminPassword", "(locked for 1 hour, too many incorrect password attempts)");
     public static final JSONStreamAware OVERFLOW = error("overflow");
@@ -143,7 +144,8 @@ public final class JSONResponses {
     public static final JSONStreamAware INCORRECT_TAGGED_DATA_CHANNEL = incorrect("channel", "(length must be not longer than " + Constants.MAX_TAGGED_DATA_CHANNEL_LENGTH + " characters)");
     public static final JSONStreamAware INCORRECT_TAGGED_DATA_FILE = incorrect("data", "cannot read file data");
     public static final JSONStreamAware INCORRECT_FILE = incorrect("file", "cannot read file data");
-    public static final JSONStreamAware INCORRECT_DATA = incorrect("data", "(length must be not longer than " + Constants.MAX_TAGGED_DATA_DATA_LENGTH + " bytes)");
+    public static final JSONStreamAware INCORRECT_DATA_TOO_LONG = incorrect("data", "(length must be not longer than " + Constants.MAX_TAGGED_DATA_DATA_LENGTH + " bytes)");
+    public static final JSONStreamAware INCORRECT_DATA_ZERO_LENGTH = incorrect("data", "(length cannot be 0 bytes)");
     public static final JSONStreamAware MISSING_MESSAGE_ENCRYPTED_MESSAGE = missing("message", "encryptedMessageData");
     public static final JSONStreamAware EITHER_MESSAGE_ENCRYPTED_MESSAGE = either("message", "encryptedMessageData");
     public static final JSONStreamAware INCORRECT_HASH_ALGORITHM = incorrect("hashAlgorithm");
@@ -403,6 +405,14 @@ public final class JSONResponses {
         response.put("errorCode", 20);
         response.put("errorDescription", "This API is disabled when running as light client");
         LIGHT_CLIENT_DISABLED_API = JSON.prepare(response);
+    }
+
+    public static final JSONStreamAware API_PROXY_NO_PUBLIC_PEERS;
+    static {
+        JSONObject response = new JSONObject();
+        response.put("errorCode", 21);
+        response.put("errorDescription", "No public peers found. Please wait while retrying connection to peers...");
+        API_PROXY_NO_PUBLIC_PEERS = JSON.prepare(response);
     }
 
     public static final JSONStreamAware PEER_NOT_CONNECTED;
