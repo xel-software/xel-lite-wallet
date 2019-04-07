@@ -57,7 +57,7 @@
 	)
 
 :startJava
-	start "RUNNING" "%javaDir%\bin\java.exe" -cp xel-lite-wallet.jar;conf -Dnxt.runtime.mode=desktop nxt.Nxt
+	start "RUNNING" "%javaDir%\bin\java.exe" -cp xel-lite-wallet.jar;conf -Dnxt.runtime.mode=desktop org.xel.Nxt
 
 :endProcess
 	endlocal

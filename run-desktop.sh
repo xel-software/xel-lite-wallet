@@ -9,4 +9,4 @@ if [ -x jre/bin/java ]; then
 else
     JAVA=java
 fi
-${JAVA} -cp xel-lite-wallet.jar:conf -Dnxt.runtime.mode=desktop -Dnxt.runtime.dirProvider=nxt.env.DefaultDirProvider nxt.Nxt
+${JAVA} -cp xel-lite-wallet.jar:conf -Dnxt.runtime.mode=desktop -Dnxt.runtime.dirProvider=nxt.env.DefaultDirProvider org.xel.Nxt
