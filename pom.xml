@@ -36,7 +36,7 @@
                     <outputDirectory>${project.basedir}</outputDirectory>
                     <archive>
                         <manifest>
-                            <mainClass>nxt.Nxt</mainClass>
+                            <mainClass>org.xel.Nxt</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

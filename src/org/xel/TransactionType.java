@@ -490,7 +490,7 @@ public abstract class TransactionType {
                     if (result == null) throw new NxtException.NotValidException("Invalid signatures provided");
 
                     try {
-                        final String add = result.toAddress(Constants.MAINNET_PARAMS).toString();
+                        final String add = result.toAddress(Genesis.MAINNET_PARAMS).toString();
                         signedBy.add(add);
                     }
                     catch(Exception e){
