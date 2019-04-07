@@ -15,21 +15,21 @@
  *
  */
 
-package nxt;
+package org.xel;
 
-import nxt.crypto.Crypto;
-import nxt.db.DbIterator;
-import nxt.db.DerivedDbTable;
-import nxt.db.FilteringIterator;
-import nxt.db.FullTextTrigger;
-import nxt.peer.Peer;
-import nxt.peer.Peers;
-import nxt.util.Convert;
-import nxt.util.JSON;
-import nxt.util.Listener;
-import nxt.util.Listeners;
-import nxt.util.Logger;
-import nxt.util.ThreadPool;
+import org.xel.crypto.Crypto;
+import org.xel.db.DbIterator;
+import org.xel.db.DerivedDbTable;
+import org.xel.db.FilteringIterator;
+import org.xel.db.FullTextTrigger;
+import org.xel.peer.Peer;
+import org.xel.peer.Peers;
+import org.xel.util.Convert;
+import org.xel.util.JSON;
+import org.xel.util.Listener;
+import org.xel.util.Listeners;
+import org.xel.util.Logger;
+import org.xel.util.ThreadPool;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
@@ -62,8 +62,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static nxt.TransactionType.SUBTYPE_PAYMENT_REDEEM;
-import static nxt.TransactionType.TYPE_PAYMENT;
+import static org.xel.TransactionType.SUBTYPE_PAYMENT_REDEEM;
+import static org.xel.TransactionType.TYPE_PAYMENT;
 
 final class BlockchainProcessorImpl implements BlockchainProcessor {
 

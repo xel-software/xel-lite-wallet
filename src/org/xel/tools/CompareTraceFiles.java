@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.tools;
+package org.xel.tools;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

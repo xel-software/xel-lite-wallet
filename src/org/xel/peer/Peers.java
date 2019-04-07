@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.peer;
+package org.xel.peer;
 
 import org.xel.Account;
 import org.xel.Block;
@@ -22,8 +22,8 @@ import org.xel.Constants;
 import org.xel.Db;
 import org.xel.Nxt;
 import org.xel.Transaction;
-import nxt.http.API;
-import nxt.http.APIEnum;
+import org.xel.http.API;
+import org.xel.http.APIEnum;
 import org.xel.util.Convert;
 import org.xel.util.Filter;
 import org.xel.util.JSON;

@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.user;
+package org.xel.user;
 
 import org.xel.Account;
 import org.xel.Block;
@@ -33,7 +33,7 @@ import java.util.Iterator;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-import static nxt.user.JSONResponses.LOCK_ACCOUNT;
+import static org.xel.user.JSONResponses.LOCK_ACCOUNT;
 
 public final class UnlockAccount extends UserServlet.UserRequestHandler {
 

@@ -14,6 +14,6 @@
  *
  */
 
-package nxt.env;
+package org.xel.env;
 
 public class MacUserDirProvider extends UnixUserDirProvider {}

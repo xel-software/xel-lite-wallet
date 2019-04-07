@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.util;
+package org.xel.util;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;

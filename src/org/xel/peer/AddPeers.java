@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.peer;
+package org.xel.peer;
 
 import org.xel.util.JSON;
 import org.json.simple.JSONArray;

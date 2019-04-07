@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.env;
+package org.xel.env;
 
 import org.xel.util.Logger;
 

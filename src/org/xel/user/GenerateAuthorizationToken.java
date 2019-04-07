@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.user;
+package org.xel.user;
 
 import org.xel.Token;
 import org.json.simple.JSONObject;
@@ -23,7 +23,7 @@ import org.json.simple.JSONStreamAware;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-import static nxt.user.JSONResponses.INVALID_SECRET_PHRASE;
+import static org.xel.user.JSONResponses.INVALID_SECRET_PHRASE;
 
 public final class GenerateAuthorizationToken extends UserServlet.UserRequestHandler {
 

@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.db;
+package org.xel.db;
 
 import org.xel.util.Logger;
 

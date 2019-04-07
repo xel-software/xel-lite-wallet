@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.user;
+package org.xel.user;
 
 import org.json.simple.JSONStreamAware;
 

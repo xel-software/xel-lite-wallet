@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.util;
+package org.xel.util;
 
 import java.io.FilterWriter;
 import java.io.IOException;

@@ -14,13 +14,13 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
 import nxt.Account;
 import nxt.BlockchainTest;
 import nxt.Constants;
-import nxt.crypto.Crypto;
-import nxt.crypto.EncryptedData;
+import org.xel.crypto.Crypto;
+import org.xel.crypto.EncryptedData;
 import org.xel.util.Convert;
 import org.xel.util.Logger;
 import org.json.simple.JSONObject;
@@ -31,7 +31,7 @@ public class SendMessageTest extends BlockchainTest {
 
     @Test
     public void sendMessage() {
-        JSONObject response = new nxt.http.APICall.Builder("sendMessage").
+        JSONObject response = new org.xel.http.APICall.Builder("sendMessage").
                 param("secretPhrase", ALICE.getSecretPhrase()).
                 param("recipient", BOB.getStrId()).
                 param("message", "hello world").
@@ -42,7 +42,7 @@ public class SendMessageTest extends BlockchainTest {
         JSONObject attachment = (JSONObject) ((JSONObject)response.get("transactionJSON")).get("attachment");
         Assert.assertEquals("hello world", attachment.get("message"));
         generateBlock();
-        response = new nxt.http.APICall.Builder("readMessage").
+        response = new org.xel.http.APICall.Builder("readMessage").
                 param("secretPhrase", BOB.getSecretPhrase()).
                 param("transaction", transaction).
                 build().invoke();
@@ -52,7 +52,7 @@ public class SendMessageTest extends BlockchainTest {
 
     @Test
     public void sendEncryptedMessage() {
-        JSONObject response = new nxt.http.APICall.Builder("sendMessage").
+        JSONObject response = new org.xel.http.APICall.Builder("sendMessage").
                 param("secretPhrase", ALICE.getSecretPhrase()).
                 param("recipient", BOB.getStrId()).
                 param("messageToEncrypt", "hello world").
@@ -65,7 +65,7 @@ public class SendMessageTest extends BlockchainTest {
         Assert.assertNotEquals(64, ((String) encryptedMessage.get("data")).length());
         Assert.assertNotEquals(32, ((String) encryptedMessage.get("nonce")).length());
         generateBlock();
-        response = new nxt.http.APICall.Builder("readMessage").
+        response = new org.xel.http.APICall.Builder("readMessage").
                 param("secretPhrase", BOB.getSecretPhrase()).
                 param("transaction", transaction).
                 build().invoke();
@@ -76,7 +76,7 @@ public class SendMessageTest extends BlockchainTest {
     @Test
     public void sendClientEncryptedMessage() {
         EncryptedData encryptedData = BOB.getAccount().encryptTo(Convert.toBytes("hello world"), ALICE.getSecretPhrase(), true);
-        JSONObject response = new nxt.http.APICall.Builder("sendMessage").
+        JSONObject response = new org.xel.http.APICall.Builder("sendMessage").
                 param("secretPhrase", ALICE.getSecretPhrase()).
                 param("recipient", BOB.getStrId()).
                 param("encryptedMessageData", Convert.toHexString(encryptedData.getData())).
@@ -90,7 +90,7 @@ public class SendMessageTest extends BlockchainTest {
         Assert.assertNotEquals(64, ((String) encryptedMessage.get("data")).length());
         Assert.assertNotEquals(32, ((String) encryptedMessage.get("nonce")).length());
         generateBlock();
-        response = new nxt.http.APICall.Builder("readMessage").
+        response = new org.xel.http.APICall.Builder("readMessage").
                 param("secretPhrase", BOB.getSecretPhrase()).
                 param("transaction", transaction).
                 build().invoke();
@@ -100,7 +100,7 @@ public class SendMessageTest extends BlockchainTest {
 
     @Test
     public void sendEncryptedMessageToSelf() {
-        JSONObject response = new nxt.http.APICall.Builder("sendMessage").
+        JSONObject response = new org.xel.http.APICall.Builder("sendMessage").
                 param("secretPhrase", ALICE.getSecretPhrase()).
                 param("recipient", BOB.getStrId()).
                 param("messageToEncryptToSelf", "hello world").
@@ -113,7 +113,7 @@ public class SendMessageTest extends BlockchainTest {
         Assert.assertNotEquals(64, ((String) encryptedMessage.get("data")).length());
         Assert.assertNotEquals(32, ((String) encryptedMessage.get("nonce")).length());
         generateBlock();
-        response = new nxt.http.APICall.Builder("readMessage").
+        response = new org.xel.http.APICall.Builder("readMessage").
                 param("secretPhrase", ALICE.getSecretPhrase()).
                 param("transaction", transaction).
                 build().invoke();
@@ -124,7 +124,7 @@ public class SendMessageTest extends BlockchainTest {
     @Test
     public void sendClientEncryptedMessageToSelf() {
         EncryptedData encryptedData = ALICE.getAccount().encryptTo(Convert.toBytes("hello world"), ALICE.getSecretPhrase(), true);
-        JSONObject response = new nxt.http.APICall.Builder("sendMessage").
+        JSONObject response = new org.xel.http.APICall.Builder("sendMessage").
                 param("secretPhrase", ALICE.getSecretPhrase()).
                 param("recipient", BOB.getStrId()).
                 param("encryptToSelfMessageData", Convert.toHexString(encryptedData.getData())).
@@ -138,7 +138,7 @@ public class SendMessageTest extends BlockchainTest {
         Assert.assertEquals(64 + 32 /* data + hash */, ((String) encryptedMessage.get("data")).length());
         Assert.assertEquals(64, ((String) encryptedMessage.get("nonce")).length());
         generateBlock();
-        response = new nxt.http.APICall.Builder("readMessage").
+        response = new org.xel.http.APICall.Builder("readMessage").
                 param("secretPhrase", ALICE.getSecretPhrase()).
                 param("transaction", transaction).
                 build().invoke();
@@ -153,13 +153,13 @@ public class SendMessageTest extends BlockchainTest {
         long id = Account.getId(publicKey);
         String rsAccount = Convert.rsAccount(id);
 
-        JSONObject response = new nxt.http.APICall.Builder("getAccount").
+        JSONObject response = new org.xel.http.APICall.Builder("getAccount").
                 param("account", rsAccount).
                 build().invoke();
         Logger.logDebugMessage("getAccount: " + response);
         Assert.assertEquals((long) 5, response.get("errorCode"));
 
-        response = new nxt.http.APICall.Builder("sendMessage").
+        response = new org.xel.http.APICall.Builder("sendMessage").
                 param("secretPhrase", ALICE.getSecretPhrase()).
                 param("recipient", rsAccount).
                 param("recipientPublicKey", publicKeyStr).
@@ -168,7 +168,7 @@ public class SendMessageTest extends BlockchainTest {
         Logger.logDebugMessage("sendMessage: " + response);
         generateBlock();
 
-        response = new nxt.http.APICall.Builder("getAccount").
+        response = new org.xel.http.APICall.Builder("getAccount").
                 param("account", rsAccount).
                 build().invoke();
         Logger.logDebugMessage("getAccount: " + response);

@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.env;
+package org.xel.env;
 
 public enum ServerStatus {
     BEFORE_DATABASE("Loading Database"), AFTER_DATABASE("Loading Resources"), STARTED("Online");

@@ -15,11 +15,11 @@
  *
  */
 
-package nxt;
+package org.xel;
 
-import nxt.db.DerivedDbTable;
-import nxt.peer.Peer;
-import nxt.util.Observable;
+import org.xel.db.DerivedDbTable;
+import org.xel.peer.Peer;
+import org.xel.util.Observable;
 import org.json.simple.JSONObject;
 
 import java.util.List;

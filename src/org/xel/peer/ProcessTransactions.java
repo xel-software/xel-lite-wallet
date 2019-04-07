@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.peer;
+package org.xel.peer;
 
 import org.xel.Nxt;
 import org.xel.NxtException;

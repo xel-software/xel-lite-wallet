@@ -14,12 +14,12 @@
  *
  */
 
-package nxt.http.twophased;
+package org.xel.http.twophased;
 
 import nxt.BlockchainTest;
 import nxt.Constants;
-import nxt.http.APICall;
-import nxt.http.twophased.TestCreateTwoPhased.TwoPhasedMoneyTransferBuilder;
+import org.xel.http.APICall;
+import org.xel.http.twophased.TestCreateTwoPhased.TwoPhasedMoneyTransferBuilder;
 import org.xel.util.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

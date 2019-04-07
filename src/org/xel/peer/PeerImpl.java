@@ -14,15 +14,15 @@
  *
  */
 
-package nxt.peer;
+package org.xel.peer;
 
 import org.xel.Account;
 import org.xel.BlockchainProcessor;
 import org.xel.Constants;
 import org.xel.Nxt;
 import org.xel.NxtException;
-import nxt.http.API;
-import nxt.http.APIEnum;
+import org.xel.http.API;
+import org.xel.http.APIEnum;
 import org.xel.util.Convert;
 import org.xel.util.CountingInputReader;
 import org.xel.util.CountingInputStream;

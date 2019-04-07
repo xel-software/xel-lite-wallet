@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.user;
+package org.xel.user;
 
 import org.xel.Account;
 import org.xel.Block;
@@ -24,8 +24,8 @@ import org.xel.Generator;
 import org.xel.Nxt;
 import org.xel.Transaction;
 import org.xel.TransactionProcessor;
-import nxt.peer.Peer;
-import nxt.peer.Peers;
+import org.xel.peer.Peer;
+import org.xel.peer.Peers;
 import org.xel.util.Convert;
 import org.xel.util.Logger;
 import org.xel.util.ThreadPool;

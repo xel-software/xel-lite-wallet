@@ -14,15 +14,15 @@
  *
  */
 
-package nxt.env;
+package org.xel.env;
 
 import org.xel.Block;
 import org.xel.Constants;
 import org.xel.Db;
 import org.xel.Generator;
 import org.xel.Nxt;
-import nxt.http.API;
-import nxt.peer.Peers;
+import org.xel.http.API;
+import org.xel.peer.Peers;
 import org.xel.util.Convert;
 import org.xel.util.Logger;
 

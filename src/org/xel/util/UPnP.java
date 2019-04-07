@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.util;
+package org.xel.util;
 
 import org.xel.Nxt;
 import org.bitlet.weupnp.GatewayDevice;

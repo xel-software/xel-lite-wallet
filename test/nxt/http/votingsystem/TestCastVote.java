@@ -14,12 +14,12 @@
  *
  */
 
-package nxt.http.votingsystem;
+package org.xel.http.votingsystem;
 
 import nxt.BlockchainTest;
 import nxt.Constants;
-import nxt.http.APICall;
-import nxt.http.votingsystem.TestCreatePoll.CreatePollBuilder;
+import org.xel.http.APICall;
+import org.xel.http.votingsystem.TestCreatePoll.CreatePollBuilder;
 import org.xel.util.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

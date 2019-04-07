@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.util;
+package org.xel.util;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;

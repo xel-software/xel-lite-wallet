@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.db;
+package org.xel.db;
 
 import java.sql.Array;
 import java.sql.Blob;

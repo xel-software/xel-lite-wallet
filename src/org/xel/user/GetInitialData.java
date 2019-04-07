@@ -14,15 +14,15 @@
  *
  */
 
-package nxt.user;
+package org.xel.user;
 
 import org.xel.Block;
 import org.xel.Constants;
 import org.xel.Nxt;
 import org.xel.Transaction;
 import org.xel.db.DbIterator;
-import nxt.peer.Peer;
-import nxt.peer.Peers;
+import org.xel.peer.Peer;
+import org.xel.peer.Peers;
 import org.xel.util.Convert;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;

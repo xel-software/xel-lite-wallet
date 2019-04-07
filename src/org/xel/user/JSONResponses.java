@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.user;
+package org.xel.user;
 
 import org.xel.util.JSON;
 import org.json.simple.JSONObject;

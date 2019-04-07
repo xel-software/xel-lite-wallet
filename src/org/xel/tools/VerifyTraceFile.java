@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.tools;
+package org.xel.tools;
 
 import org.xel.Constants;
 import org.xel.Genesis;

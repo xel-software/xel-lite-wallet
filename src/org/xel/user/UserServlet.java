@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.user;
+package org.xel.user;
 
 import org.xel.Nxt;
 import org.xel.NxtException;
@@ -31,9 +31,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-import static nxt.user.JSONResponses.DENY_ACCESS;
-import static nxt.user.JSONResponses.INCORRECT_REQUEST;
-import static nxt.user.JSONResponses.POST_REQUIRED;
+import static org.xel.user.JSONResponses.DENY_ACCESS;
+import static org.xel.user.JSONResponses.INCORRECT_REQUEST;
+import static org.xel.user.JSONResponses.POST_REQUIRED;
 
 public final class UserServlet extends HttpServlet  {
 

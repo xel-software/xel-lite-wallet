@@ -14,10 +14,10 @@
  *
  */
 
-package nxt;
+package org.xel;
 
-import nxt.db.DbIterator;
-import nxt.util.Filter;
+import org.xel.db.DbIterator;
+import org.xel.util.Filter;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

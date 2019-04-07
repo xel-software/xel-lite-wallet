@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.util;
+package org.xel.util;
 
 import java.io.IOException;
 import java.io.InputStream;

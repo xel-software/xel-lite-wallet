@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.crypto;
+package org.xel.crypto;
 
 public enum HashFunction {
 

@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.tools;
+package org.xel.tools;
 
 import org.xel.Nxt;
 import org.xel.env.service.NxtService_ServiceManagement;

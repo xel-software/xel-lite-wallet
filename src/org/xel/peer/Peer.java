@@ -14,9 +14,9 @@
  *
  */
 
-package nxt.peer;
+package org.xel.peer;
 
-import nxt.http.APIEnum;
+import org.xel.http.APIEnum;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.crypto;
+package org.xel.crypto;
 
 import javax.crypto.Mac;
 import javax.crypto.ShortBufferException;

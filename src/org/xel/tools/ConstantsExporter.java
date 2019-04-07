@@ -14,9 +14,9 @@
  *
  */
 
-package nxt.tools;
+package org.xel.tools;
 
-import nxt.http.GetConstants;
+import org.xel.http.GetConstants;
 import org.xel.util.JSON;
 
 import java.io.File;

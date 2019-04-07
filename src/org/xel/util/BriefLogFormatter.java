@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.util;
+package org.xel.util;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

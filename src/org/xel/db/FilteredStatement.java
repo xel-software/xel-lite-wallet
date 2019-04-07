@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.db;
+package org.xel.db;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

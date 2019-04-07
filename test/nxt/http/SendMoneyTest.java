@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
 import nxt.BlockchainTest;
 import nxt.Constants;

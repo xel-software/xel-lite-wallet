@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.db;
+package org.xel.db;
 
 public abstract class PersistentDbTable<T> extends EntityDbTable<T> {
 

@@ -14,16 +14,16 @@
  *
  */
 
-package nxt.user;
+package org.xel.user;
 
-import nxt.peer.Peer;
+import org.xel.peer.Peer;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.net.InetAddress;
 
-import static nxt.user.JSONResponses.LOCAL_USERS_ONLY;
+import static org.xel.user.JSONResponses.LOCAL_USERS_ONLY;
 
 public final class RemoveBlacklistedPeer extends UserServlet.UserRequestHandler {
 

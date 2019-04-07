@@ -14,13 +14,13 @@
  *
  */
 
-package nxt.addons;
+package org.xel.addons;
 
 import org.xel.BlockchainProcessor;
 import org.xel.Nxt;
 import org.xel.NxtException;
-import nxt.http.APIServlet;
-import nxt.http.APITag;
+import org.xel.http.APIServlet;
+import org.xel.http.APITag;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

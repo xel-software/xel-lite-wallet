@@ -14,13 +14,13 @@
  *
  */
 
-package nxt;
+package org.xel;
 
-import nxt.db.DbIterator;
-import nxt.db.DbUtils;
-import nxt.util.Convert;
-import nxt.util.Filter;
-import nxt.util.ReadWriteUpdateLock;
+import org.xel.db.DbIterator;
+import org.xel.db.DbUtils;
+import org.xel.util.Convert;
+import org.xel.util.Filter;
+import org.xel.util.ReadWriteUpdateLock;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

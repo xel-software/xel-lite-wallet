@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.addons;
+package org.xel.addons;
 
 import org.xel.Account;
 import org.xel.BlockchainProcessor;

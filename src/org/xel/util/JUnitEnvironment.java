@@ -1,4 +1,4 @@
-package nxt.util;
+package org.xel.util;
 
 import java.util.Arrays;
 import java.util.List;

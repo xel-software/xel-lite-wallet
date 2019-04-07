@@ -14,9 +14,9 @@
  *
  */
 
-package nxt.http.twophased;
+package org.xel.http.twophased;
 
-import nxt.http.AbstractHttpApiSuite;
+import org.xel.http.AbstractHttpApiSuite;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.junit.runner.RunWith;

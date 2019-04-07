@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.crypto;
+package org.xel.crypto;
 
 import org.xel.NxtException;
 import org.xel.util.Convert;

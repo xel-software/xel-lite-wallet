@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.db;
+package org.xel.db;
 
 import java.io.InputStream;
 import java.io.Reader;

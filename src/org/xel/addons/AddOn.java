@@ -14,9 +14,9 @@
  *
  */
 
-package nxt.addons;
+package org.xel.addons;
 
-import nxt.http.APIServlet;
+import org.xel.http.APIServlet;
 
 public interface AddOn {
 

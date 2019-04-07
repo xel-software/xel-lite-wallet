@@ -14,14 +14,14 @@
  *
  */
 
-package nxt.user;
+package org.xel.user;
 
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-import static nxt.user.JSONResponses.LOCK_ACCOUNT;
+import static org.xel.user.JSONResponses.LOCK_ACCOUNT;
 
 public final class LockAccount extends UserServlet.UserRequestHandler {
 

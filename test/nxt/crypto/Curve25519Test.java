@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.crypto;
+package org.xel.crypto;
 
 import org.xel.util.Convert;
 import org.bouncycastle.util.Arrays;

@@ -17,7 +17,7 @@ package nxt.helpers;
 import nxt.Account;
 import nxt.Attachment;
 import nxt.Redeem;
-import nxt.crypto.Crypto;
+import org.xel.crypto.Crypto;
 import org.xel.util.Logger;
 import org.bitcoinj.core.DumpedPrivateKey;
 import org.bitcoinj.core.ECKey;

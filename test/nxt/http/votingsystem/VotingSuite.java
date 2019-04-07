@@ -14,9 +14,9 @@
  *
  */
 
-package nxt.http.votingsystem;
+package org.xel.http.votingsystem;
 
-import nxt.http.AbstractHttpApiSuite;
+import org.xel.http.AbstractHttpApiSuite;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

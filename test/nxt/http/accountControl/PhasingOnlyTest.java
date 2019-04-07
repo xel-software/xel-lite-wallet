@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.http.accountControl;
+package org.xel.http.accountControl;
 
 import nxt.BlockchainTest;
 import nxt.Constants;
@@ -22,8 +22,8 @@ import nxt.Nxt;
 import nxt.PhasingParams;
 import nxt.VoteWeighting.MinBalanceModel;
 import nxt.VoteWeighting.VotingModel;
-import nxt.http.APICall;
-import nxt.http.APICall.Builder;
+import org.xel.http.APICall;
+import org.xel.http.APICall.Builder;
 import org.xel.util.Convert;
 import org.xel.util.Logger;
 import org.json.simple.JSONArray;

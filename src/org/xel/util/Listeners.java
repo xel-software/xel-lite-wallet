@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.util;
+package org.xel.util;
 
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;

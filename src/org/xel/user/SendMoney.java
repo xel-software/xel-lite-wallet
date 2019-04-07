@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.user;
+package org.xel.user;
 
 import org.xel.Account;
 import org.xel.Attachment;
@@ -29,7 +29,7 @@ import org.json.simple.JSONStreamAware;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-import static nxt.user.JSONResponses.NOTIFY_OF_ACCEPTED_TRANSACTION;
+import static org.xel.user.JSONResponses.NOTIFY_OF_ACCEPTED_TRANSACTION;
 
 public final class SendMoney extends UserServlet.UserRequestHandler {
 

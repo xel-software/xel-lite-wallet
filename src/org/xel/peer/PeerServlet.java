@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.peer;
+package org.xel.peer;
 
 import org.xel.BlockchainProcessor;
 import org.xel.Constants;

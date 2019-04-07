@@ -14,11 +14,11 @@
  *
  */
 
-package nxt.util;
+package org.xel.util;
 
 import org.xel.Constants;
 import org.xel.NxtException;
-import nxt.crypto.Crypto;
+import org.xel.crypto.Crypto;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

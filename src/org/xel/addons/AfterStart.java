@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.addons;
+package org.xel.addons;
 
 import org.xel.Nxt;
 import org.xel.util.Logger;

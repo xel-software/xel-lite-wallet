@@ -14,11 +14,11 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
 import nxt.Account;
 import nxt.BlockchainTest;
-import nxt.crypto.EncryptedData;
+import org.xel.crypto.EncryptedData;
 import org.xel.util.Convert;
 import org.json.simple.JSONStreamAware;
 import org.junit.Assert;

@@ -4,7 +4,7 @@
     Version: 1.0, license: Public Domain, coder: NxtChg (admin@nxtchg.com)
     Java Version: ChuckOne (ChuckOne@mail.de).
 */
-package nxt.crypto;
+package org.xel.crypto;
 
 final class ReedSolomon {
 

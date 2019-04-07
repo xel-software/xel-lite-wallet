@@ -14,10 +14,10 @@
  *
  */
 
-package nxt.env.service;
+package org.xel.env.service;
 
 import org.xel.Nxt;
-import nxt.env.LookAndFeel;
+import org.xel.env.LookAndFeel;
 
 import javax.swing.*;
 
