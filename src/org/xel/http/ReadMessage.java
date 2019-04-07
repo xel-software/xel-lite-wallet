@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
 import org.xel.Account;
 import org.xel.Appendix;
@@ -31,9 +31,9 @@ import org.json.simple.JSONStreamAware;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
-import static nxt.http.JSONResponses.NO_MESSAGE;
-import static nxt.http.JSONResponses.PRUNED_TRANSACTION;
-import static nxt.http.JSONResponses.UNKNOWN_TRANSACTION;
+import static org.xel.http.JSONResponses.NO_MESSAGE;
+import static org.xel.http.JSONResponses.PRUNED_TRANSACTION;
+import static org.xel.http.JSONResponses.UNKNOWN_TRANSACTION;
 
 public final class ReadMessage extends APIServlet.APIRequestHandler {
 

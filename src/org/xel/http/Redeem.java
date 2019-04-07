@@ -13,7 +13,7 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
 import javax.servlet.http.HttpServletRequest;
 

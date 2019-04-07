@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
 import org.xel.Nxt;
 import org.xel.NxtException;
