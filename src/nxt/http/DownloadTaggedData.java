@@ -16,9 +16,9 @@
 
 package nxt.http;
 
-import nxt.Nxt;
-import nxt.NxtException;
-import nxt.TaggedData;
+import org.xel.Nxt;
+import org.xel.NxtException;
+import org.xel.TaggedData;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

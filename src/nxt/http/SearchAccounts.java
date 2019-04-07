@@ -16,9 +16,9 @@
 
 package nxt.http;
 
-import nxt.Account;
-import nxt.db.DbIterator;
-import nxt.util.Convert;
+import org.xel.Account;
+import org.xel.db.DbIterator;
+import org.xel.util.Convert;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

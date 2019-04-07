@@ -16,7 +16,7 @@
 
 package nxt.http;
 
-import nxt.Token;
+import org.xel.Token;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

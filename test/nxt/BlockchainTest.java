@@ -16,8 +16,8 @@
 
 package nxt;
 
-import nxt.util.Logger;
-import nxt.util.Time;
+import org.xel.util.Logger;
+import org.xel.util.Time;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;

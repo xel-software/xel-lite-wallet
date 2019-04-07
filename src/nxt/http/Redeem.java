@@ -13,15 +13,15 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
 import javax.servlet.http.HttpServletRequest;
-import nxt.*;
+
 import org.json.simple.JSONStreamAware;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import org.xel.Account;
+import org.xel.Attachment;
+import org.xel.Genesis;
+import org.xel.NxtException;
 
 public final class Redeem extends CreateTransaction {
 
@@ -45,7 +45,7 @@ public final class Redeem extends CreateTransaction {
         final String[] parts = address.split(",");
         if (parts.length == 3) address = parts[1];
 
-        if (!nxt.Redeem.hasAddress(address)) return JSONResponses.MISSING_FIELDS_REDEEM;
+        if (!org.xel.Redeem.hasAddress(address)) return JSONResponses.MISSING_FIELDS_REDEEM;
         // More boundary checks
         final long amountlong = ParameterParser.getAmountNQT(req);
 

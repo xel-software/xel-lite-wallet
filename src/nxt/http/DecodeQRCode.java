@@ -24,9 +24,9 @@ import com.google.zxing.NotFoundException;
 import com.google.zxing.Result;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
-import nxt.NxtException;
-import nxt.util.Convert;
-import nxt.util.Logger;
+import org.xel.NxtException;
+import org.xel.util.Convert;
+import org.xel.util.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

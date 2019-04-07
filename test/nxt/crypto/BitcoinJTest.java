@@ -1,4 +1,4 @@
-package nxt.crypto;
+package org.xel.crypto;
 
 import org.bitcoinj.core.ECKey;
 import org.bitcoinj.core.Sha256Hash;

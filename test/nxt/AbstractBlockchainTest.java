@@ -16,9 +16,9 @@
 
 package nxt;
 
-import nxt.crypto.Crypto;
-import nxt.util.Listener;
-import nxt.util.Logger;
+import org.xel.crypto.Crypto;
+import org.xel.util.Listener;
+import org.xel.util.Logger;
 import org.junit.Assert;
 
 import java.util.Properties;

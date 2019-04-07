@@ -1,10 +1,10 @@
 package nxt;
 
-import nxt.crypto.Crypto;
+import org.xel.crypto.Crypto;
 import nxt.helpers.RedeemFunctions;
-import nxt.util.Convert;
-import nxt.util.JSON;
-import nxt.util.Logger;
+import org.xel.util.Convert;
+import org.xel.util.JSON;
+import org.xel.util.Logger;
 import org.bitcoinj.core.DumpedPrivateKey;
 import org.bitcoinj.core.ECKey;
 import org.bitcoinj.core.NetworkParameters;

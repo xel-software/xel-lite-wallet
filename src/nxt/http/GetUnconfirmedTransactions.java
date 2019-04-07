@@ -16,11 +16,11 @@
 
 package nxt.http;
 
-import nxt.Nxt;
-import nxt.Transaction;
-import nxt.db.DbIterator;
-import nxt.db.FilteringIterator;
-import nxt.util.Convert;
+import org.xel.Nxt;
+import org.xel.Transaction;
+import org.xel.db.DbIterator;
+import org.xel.db.FilteringIterator;
+import org.xel.util.Convert;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

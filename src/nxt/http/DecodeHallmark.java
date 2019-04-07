@@ -16,7 +16,7 @@
 
 package nxt.http;
 
-import nxt.peer.Hallmark;
+import org.xel.peer.Hallmark;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

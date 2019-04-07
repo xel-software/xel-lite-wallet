@@ -16,10 +16,10 @@
 
 package nxt.http;
 
-import nxt.peer.Peer;
-import nxt.util.Convert;
-import nxt.util.JSON;
-import nxt.util.Logger;
+import org.xel.peer.Peer;
+import org.xel.util.Convert;
+import org.xel.util.JSON;
+import org.xel.util.Logger;
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.api.Request;
 import org.eclipse.jetty.client.api.Response;

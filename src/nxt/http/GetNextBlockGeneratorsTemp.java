@@ -16,11 +16,11 @@
 
 package nxt.http;
 
-import nxt.Block;
-import nxt.Blockchain;
-import nxt.Generator;
-import nxt.Nxt;
-import nxt.NxtException;
+import org.xel.Block;
+import org.xel.Blockchain;
+import org.xel.Generator;
+import org.xel.Nxt;
+import org.xel.NxtException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

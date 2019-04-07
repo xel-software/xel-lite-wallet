@@ -16,9 +16,9 @@
 
 package nxt.http;
 
-import nxt.Block;
-import nxt.Nxt;
-import nxt.NxtException;
+import org.xel.Block;
+import org.xel.Nxt;
+import org.xel.NxtException;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

@@ -16,11 +16,11 @@
 
 package nxt.http;
 
-import nxt.Account;
-import nxt.Attachment;
-import nxt.Constants;
-import nxt.NxtException;
-import nxt.PhasingParams;
+import org.xel.Account;
+import org.xel.Attachment;
+import org.xel.Constants;
+import org.xel.NxtException;
+import org.xel.PhasingParams;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

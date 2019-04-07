@@ -16,11 +16,11 @@
 
 package nxt.http;
 
-import nxt.Appendix;
-import nxt.Nxt;
-import nxt.NxtException;
-import nxt.Transaction;
-import nxt.util.JSON;
+import org.xel.Appendix;
+import org.xel.Nxt;
+import org.xel.NxtException;
+import org.xel.Transaction;
+import org.xel.util.JSON;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

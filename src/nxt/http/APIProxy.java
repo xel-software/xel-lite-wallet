@@ -16,12 +16,12 @@
 
 package nxt.http;
 
-import nxt.Constants;
-import nxt.Nxt;
-import nxt.peer.Peer;
-import nxt.peer.Peers;
-import nxt.util.Logger;
-import nxt.util.ThreadPool;
+import org.xel.Constants;
+import org.xel.Nxt;
+import org.xel.peer.Peer;
+import org.xel.peer.Peers;
+import org.xel.util.Logger;
+import org.xel.util.ThreadPool;
 
 import java.util.ArrayList;
 import java.util.Collections;

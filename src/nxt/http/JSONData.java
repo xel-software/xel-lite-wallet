@@ -16,15 +16,15 @@
 
 package nxt.http;
 
-import nxt.*;
-import nxt.AccountLedger.LedgerEntry;
-import nxt.crypto.Crypto;
-import nxt.crypto.EncryptedData;
-import nxt.db.DbIterator;
-import nxt.peer.Hallmark;
-import nxt.peer.Peer;
-import nxt.util.Convert;
-import nxt.util.Filter;
+import org.xel.*;
+import org.xel.AccountLedger.LedgerEntry;
+import org.xel.crypto.Crypto;
+import org.xel.crypto.EncryptedData;
+import org.xel.db.DbIterator;
+import org.xel.peer.Hallmark;
+import org.xel.peer.Peer;
+import org.xel.util.Convert;
+import org.xel.util.Filter;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -207,7 +207,7 @@ public final class JSONData {
         json.put("blockchainState", peer.getBlockchainState());
         return json;
     }
-    static JSONObject token(nxt.Token token) {
+    static JSONObject token(Token token) {
         JSONObject json = new JSONObject();
         putAccount(json, "account", Account.getId(token.getPublicKey()));
         json.put("timestamp", token.getTimestamp());

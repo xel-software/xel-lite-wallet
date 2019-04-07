@@ -16,7 +16,7 @@
 
 package nxt.crypto;
 
-import nxt.util.Convert;
+import org.xel.util.Convert;
 import org.bouncycastle.util.Arrays;
 import org.junit.Test;
 

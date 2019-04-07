@@ -16,9 +16,9 @@
 
 package nxt;
 
-import nxt.crypto.Crypto;
+import org.xel.crypto.Crypto;
 import nxt.helpers.RedeemFunctions;
-import nxt.util.Time;
+import org.xel.util.Time;
 import org.junit.Assert;
 import org.junit.Test;
 

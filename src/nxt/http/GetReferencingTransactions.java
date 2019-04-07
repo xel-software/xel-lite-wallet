@@ -16,10 +16,10 @@
 
 package nxt.http;
 
-import nxt.Nxt;
-import nxt.NxtException;
-import nxt.Transaction;
-import nxt.db.DbIterator;
+import org.xel.Nxt;
+import org.xel.NxtException;
+import org.xel.Transaction;
+import org.xel.db.DbIterator;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

@@ -17,8 +17,8 @@
 package nxt;
 
 
-import nxt.util.Listener;
-import nxt.util.Logger;
+import org.xel.util.Listener;
+import org.xel.util.Logger;
 import org.h2.tools.Shell;
 
 import java.io.ByteArrayOutputStream;

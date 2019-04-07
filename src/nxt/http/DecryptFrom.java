@@ -16,11 +16,11 @@
 
 package nxt.http;
 
-import nxt.Account;
-import nxt.NxtException;
-import nxt.crypto.EncryptedData;
-import nxt.util.Convert;
-import nxt.util.Logger;
+import org.xel.Account;
+import org.xel.NxtException;
+import org.xel.crypto.EncryptedData;
+import org.xel.util.Convert;
+import org.xel.util.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

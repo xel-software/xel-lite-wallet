@@ -16,8 +16,8 @@
 
 package nxt.http;
 
-import nxt.NxtException;
-import nxt.PhasingPoll;
+import org.xel.NxtException;
+import org.xel.PhasingPoll;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

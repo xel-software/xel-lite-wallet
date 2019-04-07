@@ -16,11 +16,11 @@
 
 package nxt.http;
 
-import nxt.Constants;
-import nxt.peer.Peer;
-import nxt.peer.Peers;
-import nxt.util.Convert;
-import nxt.util.Logger;
+import org.xel.Constants;
+import org.xel.peer.Peer;
+import org.xel.peer.Peers;
+import org.xel.util.Convert;
+import org.xel.util.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

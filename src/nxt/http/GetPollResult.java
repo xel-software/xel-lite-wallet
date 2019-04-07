@@ -17,10 +17,10 @@
 package nxt.http;
 
 
-import nxt.NxtException;
-import nxt.Poll;
-import nxt.VoteWeighting;
-import nxt.util.Convert;
+import org.xel.NxtException;
+import org.xel.Poll;
+import org.xel.VoteWeighting;
+import org.xel.util.Convert;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

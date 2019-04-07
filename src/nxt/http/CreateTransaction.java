@@ -17,11 +17,11 @@
 
 package nxt.http;
 
-import nxt.*;
-import nxt.crypto.Crypto;
-import nxt.util.Convert;
+import org.xel.crypto.Crypto;
+import org.xel.util.Convert;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
+import org.xel.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;

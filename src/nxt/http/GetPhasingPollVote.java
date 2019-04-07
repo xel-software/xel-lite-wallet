@@ -16,9 +16,9 @@
 
 package nxt.http;
 
-import nxt.NxtException;
-import nxt.PhasingVote;
-import nxt.util.JSON;
+import org.xel.NxtException;
+import org.xel.PhasingVote;
+import org.xel.util.JSON;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

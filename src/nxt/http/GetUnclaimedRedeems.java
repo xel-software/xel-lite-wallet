@@ -21,8 +21,8 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 
-import nxt.NxtException;
-import nxt.Redeem;
+import org.xel.NxtException;
+import org.xel.Redeem;
 
 public final class GetUnclaimedRedeems extends APIServlet.APIRequestHandler {
 

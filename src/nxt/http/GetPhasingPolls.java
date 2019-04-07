@@ -14,9 +14,9 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
-import nxt.PhasingPoll;
+import org.xel.PhasingPoll;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

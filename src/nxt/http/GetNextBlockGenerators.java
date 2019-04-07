@@ -16,10 +16,10 @@
 
 package nxt.http;
 
-import nxt.Block;
-import nxt.Constants;
-import nxt.Hub;
-import nxt.Nxt;
+import org.xel.Block;
+import org.xel.Constants;
+import org.xel.Hub;
+import org.xel.Nxt;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

@@ -16,10 +16,10 @@
 
 package nxt.http;
 
-import nxt.NxtException;
-import nxt.peer.Peer;
-import nxt.peer.Peers;
-import nxt.util.Convert;
+import org.xel.NxtException;
+import org.xel.peer.Peer;
+import org.xel.peer.Peers;
+import org.xel.util.Convert;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

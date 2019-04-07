@@ -16,13 +16,13 @@
 
 package nxt.http;
 
-import nxt.Account;
-import nxt.Attachment;
-import nxt.Nxt;
-import nxt.NxtException;
-import nxt.TaggedData;
-import nxt.Transaction;
-import nxt.TransactionType;
+import org.xel.Account;
+import org.xel.Attachment;
+import org.xel.Nxt;
+import org.xel.NxtException;
+import org.xel.TaggedData;
+import org.xel.Transaction;
+import org.xel.TransactionType;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

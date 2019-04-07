@@ -16,7 +16,7 @@
 
 package nxt.http;
 
-import nxt.util.MemoryHandler;
+import org.xel.util.MemoryHandler;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

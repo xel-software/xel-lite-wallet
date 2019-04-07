@@ -16,12 +16,13 @@
 
 package nxt.http;
 
-import nxt.Nxt;
-import nxt.NxtException;
-import nxt.Transaction;
-import nxt.util.Convert;
+import org.xel.Nxt;
+import org.xel.NxtException;
+import org.xel.Transaction;
+import org.xel.util.Convert;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
+import org.xel.Appendix;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -43,7 +44,7 @@ import javax.servlet.http.HttpServletRequest;
  * In case the client submits transactionBytes for a transaction containing prunable appendages, the client also needs
  * to submit the prunableAttachmentJSON parameter which includes the attachment JSON for the prunable appendages.<br>
  * <p>
- * Prunable appendages are classes implementing the {@link nxt.Appendix.Prunable} interface.
+ * Prunable appendages are classes implementing the {@link Appendix.Prunable} interface.
  */
 public final class BroadcastTransaction extends APIServlet.APIRequestHandler {
 

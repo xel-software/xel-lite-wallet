@@ -16,10 +16,10 @@
 
 package nxt.http;
 
-import nxt.Account;
-import nxt.Generator;
-import nxt.Nxt;
-import nxt.crypto.Crypto;
+import org.xel.Account;
+import org.xel.Generator;
+import org.xel.Nxt;
+import org.xel.crypto.Crypto;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

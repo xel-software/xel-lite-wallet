@@ -16,9 +16,9 @@
 
 package nxt.http;
 
-import nxt.NxtException;
-import nxt.PrunableMessage;
-import nxt.db.DbIterator;
+import org.xel.NxtException;
+import org.xel.PrunableMessage;
+import org.xel.db.DbIterator;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

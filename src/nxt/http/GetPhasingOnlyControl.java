@@ -16,8 +16,8 @@
 
 package nxt.http;
 
-import nxt.AccountRestrictions.PhasingOnly;
-import nxt.util.JSON;
+import org.xel.AccountRestrictions.PhasingOnly;
+import org.xel.util.JSON;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

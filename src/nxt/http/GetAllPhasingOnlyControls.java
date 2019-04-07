@@ -16,8 +16,8 @@
 
 package nxt.http;
 
-import nxt.AccountRestrictions.PhasingOnly;
-import nxt.db.DbIterator;
+import org.xel.AccountRestrictions.PhasingOnly;
+import org.xel.db.DbIterator;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

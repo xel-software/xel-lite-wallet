@@ -14,19 +14,19 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
-import nxt.Account;
-import nxt.Attachment;
-import nxt.Constants;
-import nxt.NxtException;
-import nxt.util.Convert;
+import org.xel.Account;
+import org.xel.Attachment;
+import org.xel.Constants;
+import org.xel.NxtException;
+import org.xel.util.Convert;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static nxt.http.JSONResponses.INCORRECT_ACCOUNT_DESCRIPTION_LENGTH;
-import static nxt.http.JSONResponses.INCORRECT_ACCOUNT_NAME_LENGTH;
+import static org.xel.http.JSONResponses.INCORRECT_ACCOUNT_DESCRIPTION_LENGTH;
+import static org.xel.http.JSONResponses.INCORRECT_ACCOUNT_NAME_LENGTH;
 
 public final class SetAccountInfo extends CreateTransaction {
 

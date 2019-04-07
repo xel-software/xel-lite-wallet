@@ -16,8 +16,8 @@
 
 package nxt.http;
 
-import nxt.crypto.HashFunction;
-import nxt.util.Convert;
+import org.xel.crypto.HashFunction;
+import org.xel.util.Convert;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

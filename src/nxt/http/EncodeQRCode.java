@@ -23,9 +23,9 @@ import com.google.zxing.WriterException;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import nxt.NxtException;
-import nxt.util.Convert;
-import nxt.util.Logger;
+import org.xel.NxtException;
+import org.xel.util.Convert;
+import org.xel.util.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

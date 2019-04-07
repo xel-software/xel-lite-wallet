@@ -14,16 +14,16 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
-import nxt.Nxt;
-import nxt.Transaction;
+import org.xel.Nxt;
+import org.xel.Transaction;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static nxt.http.JSONResponses.PRUNED_TRANSACTION;
-import static nxt.http.JSONResponses.UNKNOWN_TRANSACTION;
+import static org.xel.http.JSONResponses.PRUNED_TRANSACTION;
+import static org.xel.http.JSONResponses.UNKNOWN_TRANSACTION;
 
 public class RetrievePrunedTransaction extends APIServlet.APIRequestHandler {
 

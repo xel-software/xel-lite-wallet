@@ -16,13 +16,13 @@
 
 package nxt.http;
 
-import nxt.Account;
-import nxt.Attachment;
-import nxt.Attachment.MessagingPollCreation.PollBuilder;
-import nxt.Constants;
-import nxt.Nxt;
-import nxt.NxtException;
-import nxt.util.Convert;
+import org.xel.Account;
+import org.xel.Attachment;
+import org.xel.Attachment.MessagingPollCreation.PollBuilder;
+import org.xel.Constants;
+import org.xel.Nxt;
+import org.xel.NxtException;
+import org.xel.util.Convert;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

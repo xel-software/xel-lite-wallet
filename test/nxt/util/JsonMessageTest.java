@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.util;
+package org.xel.util;
 
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;

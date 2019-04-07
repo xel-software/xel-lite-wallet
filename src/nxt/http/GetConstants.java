@@ -16,15 +16,15 @@
 
 package nxt.http;
 
-import nxt.Constants;
-import nxt.Genesis;
-import nxt.PhasingPoll;
-import nxt.TransactionType;
-import nxt.VoteWeighting;
-import nxt.crypto.HashFunction;
-import nxt.peer.Peer;
-import nxt.util.JSON;
-import nxt.util.Logger;
+import org.xel.Constants;
+import org.xel.Genesis;
+import org.xel.PhasingPoll;
+import org.xel.TransactionType;
+import org.xel.VoteWeighting;
+import org.xel.crypto.HashFunction;
+import org.xel.peer.Peer;
+import org.xel.util.JSON;
+import org.xel.util.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

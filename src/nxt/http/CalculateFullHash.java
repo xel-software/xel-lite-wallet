@@ -16,10 +16,10 @@
 
 package nxt.http;
 
-import nxt.NxtException;
-import nxt.Transaction;
-import nxt.crypto.Crypto;
-import nxt.util.Convert;
+import org.xel.NxtException;
+import org.xel.Transaction;
+import org.xel.crypto.Crypto;
+import org.xel.util.Convert;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

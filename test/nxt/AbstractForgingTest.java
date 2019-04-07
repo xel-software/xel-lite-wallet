@@ -16,7 +16,7 @@
 
 package nxt;
 
-import nxt.crypto.Crypto;
+import org.xel.crypto.Crypto;
 import org.junit.Assert;
 
 import java.util.Properties;

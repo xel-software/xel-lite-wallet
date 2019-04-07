@@ -16,10 +16,10 @@
 
 package nxt.http;
 
-import nxt.Nxt;
-import nxt.NxtException;
-import nxt.PrunableMessage;
-import nxt.util.JSON;
+import org.xel.Nxt;
+import org.xel.NxtException;
+import org.xel.PrunableMessage;
+import org.xel.util.JSON;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

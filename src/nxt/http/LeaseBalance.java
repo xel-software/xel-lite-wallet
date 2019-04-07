@@ -16,10 +16,10 @@
 
 package nxt.http;
 
-import nxt.Account;
-import nxt.Attachment;
-import nxt.Constants;
-import nxt.NxtException;
+import org.xel.Account;
+import org.xel.Attachment;
+import org.xel.Constants;
+import org.xel.NxtException;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

@@ -17,9 +17,9 @@
 
 package nxt.http;
 
-import nxt.Constants;
-import nxt.util.Convert;
-import nxt.util.JSON;
+import org.xel.Constants;
+import org.xel.util.Convert;
+import org.xel.util.JSON;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

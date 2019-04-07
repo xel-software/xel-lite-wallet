@@ -16,9 +16,9 @@
 
 package nxt.http;
 
-import nxt.AccountLedger;
-import nxt.AccountLedger.LedgerEntry;
-import nxt.NxtException;
+import org.xel.AccountLedger;
+import org.xel.AccountLedger.LedgerEntry;
+import org.xel.NxtException;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

@@ -16,13 +16,13 @@
 
 package nxt.http;
 
-import nxt.Appendix;
-import nxt.Attachment;
-import nxt.Blockchain;
-import nxt.Nxt;
-import nxt.NxtException;
-import nxt.TaggedData;
-import nxt.util.Filter;
+import org.xel.Appendix;
+import org.xel.Attachment;
+import org.xel.Blockchain;
+import org.xel.Nxt;
+import org.xel.NxtException;
+import org.xel.TaggedData;
+import org.xel.util.Filter;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

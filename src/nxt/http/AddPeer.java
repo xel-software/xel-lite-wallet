@@ -14,19 +14,19 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
-import nxt.NxtException;
-import nxt.http.APIServlet.APIRequestHandler;
-import nxt.peer.Peer;
-import nxt.peer.Peers;
-import nxt.util.Convert;
+import org.xel.NxtException;
+import org.xel.http.APIServlet.APIRequestHandler;
+import org.xel.peer.Peer;
+import org.xel.peer.Peers;
+import org.xel.util.Convert;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static nxt.http.JSONResponses.MISSING_PEER;
+import static org.xel.http.JSONResponses.MISSING_PEER;
 
 public class AddPeer extends APIRequestHandler {
 

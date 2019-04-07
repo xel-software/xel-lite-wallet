@@ -14,15 +14,15 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
-import nxt.AccountLedger;
-import nxt.Block;
-import nxt.BlockchainProcessor;
-import nxt.Constants;
-import nxt.Nxt;
-import nxt.peer.Peer;
-import nxt.peer.Peers;
+import org.xel.AccountLedger;
+import org.xel.Block;
+import org.xel.BlockchainProcessor;
+import org.xel.Constants;
+import org.xel.Nxt;
+import org.xel.peer.Peer;
+import org.xel.peer.Peers;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 

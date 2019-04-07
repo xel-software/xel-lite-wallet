@@ -16,13 +16,13 @@
 
 package nxt.http;
 
-import nxt.Constants;
-import nxt.Db;
-import nxt.Nxt;
-import nxt.NxtException;
-import nxt.addons.AddOns;
-import nxt.util.JSON;
-import nxt.util.Logger;
+import org.xel.Constants;
+import org.xel.Db;
+import org.xel.Nxt;
+import org.xel.NxtException;
+import org.xel.addons.AddOns;
+import org.xel.util.JSON;
+import org.xel.util.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

@@ -16,8 +16,8 @@
 
 package nxt.http;
 
-import nxt.Constants;
-import nxt.util.Convert;
+import org.xel.Constants;
+import org.xel.util.Convert;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

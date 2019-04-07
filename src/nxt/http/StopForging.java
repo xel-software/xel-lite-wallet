@@ -16,7 +16,7 @@
 
 package nxt.http;
 
-import nxt.Generator;
+import org.xel.Generator;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

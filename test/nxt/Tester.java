@@ -16,9 +16,9 @@
 
 package nxt;
 
-import nxt.crypto.Crypto;
-import nxt.db.DbIterator;
-import nxt.util.Convert;
+import org.xel.crypto.Crypto;
+import org.xel.db.DbIterator;
+import org.xel.util.Convert;
 
 import java.util.HashMap;
 import java.util.Map;

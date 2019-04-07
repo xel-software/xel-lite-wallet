@@ -16,10 +16,10 @@
 
 package nxt.http;
 
-import nxt.NxtException;
+import org.xel.NxtException;
 import nxt.http.APIServlet.APIRequestHandler;
-import nxt.peer.Peer;
-import nxt.peer.Peers;
+import org.xel.peer.Peer;
+import org.xel.peer.Peers;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

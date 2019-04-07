@@ -12,7 +12,7 @@
  * Removal or modification of this copyright notice is prohibited.
  *
  */
-package nxt.crypto;
+package org.xel.crypto;
 
 import org.junit.Assert;
 import org.junit.Test;

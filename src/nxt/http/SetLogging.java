@@ -16,9 +16,9 @@
 
 package nxt.http;
 
-import nxt.peer.Peers;
-import nxt.util.JSON;
-import nxt.util.Logger;
+import org.xel.peer.Peers;
+import org.xel.util.JSON;
+import org.xel.util.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

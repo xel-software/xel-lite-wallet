@@ -16,7 +16,7 @@ package nxt.helpers;
 
 import nxt.*;
 import nxt.crypto.Crypto;
-import nxt.util.Convert;
+import org.xel.util.Convert;
 
 import java.util.Objects;
 

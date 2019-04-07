@@ -16,9 +16,9 @@
 
 package nxt.http;
 
-import nxt.Constants;
-import nxt.peer.Hallmark;
-import nxt.util.Convert;
+import org.xel.Constants;
+import org.xel.peer.Hallmark;
+import org.xel.util.Convert;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

@@ -17,12 +17,12 @@
 package nxt.http;
 
 
-import nxt.Account;
-import nxt.Attachment;
-import nxt.Constants;
-import nxt.NxtException;
-import nxt.PhasingPoll;
-import nxt.util.Convert;
+import org.xel.Account;
+import org.xel.Attachment;
+import org.xel.Constants;
+import org.xel.NxtException;
+import org.xel.PhasingPoll;
+import org.xel.util.Convert;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

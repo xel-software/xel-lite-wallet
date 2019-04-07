@@ -16,12 +16,12 @@
 
 package nxt.http;
 
-import nxt.Constants;
-import nxt.Nxt;
-import nxt.util.Convert;
-import nxt.util.Logger;
-import nxt.util.ThreadPool;
-import nxt.util.UPnP;
+import org.xel.Constants;
+import org.xel.Nxt;
+import org.xel.util.Convert;
+import org.xel.util.Logger;
+import org.xel.util.ThreadPool;
+import org.xel.util.UPnP;
 import org.eclipse.jetty.security.ConstraintMapping;
 import org.eclipse.jetty.security.ConstraintSecurityHandler;
 import org.eclipse.jetty.security.SecurityHandler;
@@ -248,7 +248,7 @@ public final class API {
                 gzipHandler.setExcludedPaths("/nxt", "/nxt-proxy");
             }
             gzipHandler.setIncludedMethods("GET", "POST");
-            gzipHandler.setMinGzipSize(nxt.peer.Peers.MIN_COMPRESS_SIZE);
+            gzipHandler.setMinGzipSize(org.xel.peer.Peers.MIN_COMPRESS_SIZE);
             apiHandler.setGzipHandler(gzipHandler);
 
             apiHandler.addServlet(APITestServlet.class, "/test");

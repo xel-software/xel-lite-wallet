@@ -18,7 +18,7 @@ package nxt.http;
 
 import nxt.BlockchainTest;
 import nxt.Constants;
-import nxt.util.Logger;
+import org.xel.util.Logger;
 import org.json.simple.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;

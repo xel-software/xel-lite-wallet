@@ -16,9 +16,9 @@
 
 package nxt.http;
 
-import nxt.Db;
-import nxt.util.Convert;
-import nxt.util.JSON;
+import org.xel.Db;
+import org.xel.util.Convert;
+import org.xel.util.JSON;
 import org.h2.tools.Shell;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;

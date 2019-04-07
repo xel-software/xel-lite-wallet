@@ -14,7 +14,7 @@
  *
  */
 
-package nxt.util;
+package org.xel.util;
 
 import org.junit.Assert;
 import org.junit.Test;

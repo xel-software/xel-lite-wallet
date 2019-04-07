@@ -21,7 +21,7 @@ import nxt.Constants;
 import nxt.Nxt;
 import nxt.http.APICall;
 import nxt.http.twophased.TestCreateTwoPhased.TwoPhasedMoneyTransferBuilder;
-import nxt.util.Logger;
+import org.xel.util.Logger;
 import org.json.simple.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;

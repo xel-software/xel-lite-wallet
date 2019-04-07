@@ -14,9 +14,9 @@
  *
  */
 
-package nxt.crypto;
+package org.xel.crypto;
 
-import nxt.crypto.ReedSolomon.DecodeException;
+import org.xel.crypto.ReedSolomon.DecodeException;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

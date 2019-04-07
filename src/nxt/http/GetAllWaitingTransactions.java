@@ -16,8 +16,8 @@
 
 package nxt.http;
 
-import nxt.Nxt;
-import nxt.Transaction;
+import org.xel.Nxt;
+import org.xel.Transaction;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

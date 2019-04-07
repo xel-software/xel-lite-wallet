@@ -16,7 +16,7 @@
 
 package nxt.http;
 
-import nxt.util.Logger;
+import org.xel.util.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.junit.Assert;

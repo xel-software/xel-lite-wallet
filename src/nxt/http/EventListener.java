@@ -16,20 +16,20 @@
 
 package nxt.http;
 
-import nxt.AccountLedger;
-import nxt.AccountLedger.LedgerEntry;
-import nxt.Block;
-import nxt.BlockchainProcessor;
-import nxt.Db;
-import nxt.Nxt;
-import nxt.Transaction;
-import nxt.TransactionProcessor;
-import nxt.db.TransactionalDb;
-import nxt.peer.Peer;
-import nxt.peer.Peers;
-import nxt.util.Convert;
-import nxt.util.Listener;
-import nxt.util.Logger;
+import org.xel.AccountLedger;
+import org.xel.AccountLedger.LedgerEntry;
+import org.xel.Block;
+import org.xel.BlockchainProcessor;
+import org.xel.Db;
+import org.xel.Nxt;
+import org.xel.Transaction;
+import org.xel.TransactionProcessor;
+import org.xel.db.TransactionalDb;
+import org.xel.peer.Peer;
+import org.xel.peer.Peers;
+import org.xel.util.Convert;
+import org.xel.util.Listener;
+import org.xel.util.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 

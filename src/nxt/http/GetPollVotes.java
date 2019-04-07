@@ -16,12 +16,12 @@
 
 package nxt.http;
 
-import nxt.Nxt;
-import nxt.NxtException;
-import nxt.Poll;
-import nxt.Vote;
-import nxt.VoteWeighting;
-import nxt.db.DbIterator;
+import org.xel.Nxt;
+import org.xel.NxtException;
+import org.xel.Poll;
+import org.xel.Vote;
+import org.xel.VoteWeighting;
+import org.xel.db.DbIterator;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;

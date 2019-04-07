@@ -16,17 +16,17 @@
 
 package nxt.http;
 
-import nxt.Account;
-import nxt.AccountRestrictions;
-import nxt.Constants;
-import nxt.Generator;
-import nxt.Nxt;
-import nxt.Poll;
-import nxt.PrunableMessage;
-import nxt.TaggedData;
-import nxt.Vote;
-import nxt.peer.Peers;
-import nxt.util.UPnP;
+import org.xel.Account;
+import org.xel.AccountRestrictions;
+import org.xel.Constants;
+import org.xel.Generator;
+import org.xel.Nxt;
+import org.xel.Poll;
+import org.xel.PrunableMessage;
+import org.xel.TaggedData;
+import org.xel.Vote;
+import org.xel.peer.Peers;
+import org.xel.util.UPnP;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 

@@ -16,9 +16,9 @@
 
 package nxt.http;
 
-import nxt.Nxt;
-import nxt.Transaction;
-import nxt.util.Convert;
+import org.xel.Nxt;
+import org.xel.Transaction;
+import org.xel.util.Convert;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;

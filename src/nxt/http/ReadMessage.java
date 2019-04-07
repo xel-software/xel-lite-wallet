@@ -14,26 +14,26 @@
  *
  */
 
-package nxt.http;
+package org.xel.http;
 
-import nxt.Account;
-import nxt.Appendix;
-import nxt.Nxt;
-import nxt.PrunableMessage;
-import nxt.Transaction;
-import nxt.crypto.Crypto;
-import nxt.crypto.EncryptedData;
-import nxt.util.Convert;
-import nxt.util.Logger;
+import org.xel.Account;
+import org.xel.Appendix;
+import org.xel.Nxt;
+import org.xel.PrunableMessage;
+import org.xel.Transaction;
+import org.xel.crypto.Crypto;
+import org.xel.crypto.EncryptedData;
+import org.xel.util.Convert;
+import org.xel.util.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
 
-import static nxt.http.JSONResponses.NO_MESSAGE;
-import static nxt.http.JSONResponses.PRUNED_TRANSACTION;
-import static nxt.http.JSONResponses.UNKNOWN_TRANSACTION;
+import static org.xel.http.JSONResponses.NO_MESSAGE;
+import static org.xel.http.JSONResponses.PRUNED_TRANSACTION;
+import static org.xel.http.JSONResponses.UNKNOWN_TRANSACTION;
 
 public final class ReadMessage extends APIServlet.APIRequestHandler {
 

@@ -16,8 +16,8 @@
 
 package nxt.http;
 
-import nxt.Db;
-import nxt.db.FullTextTrigger;
+import org.xel.Db;
+import org.xel.db.FullTextTrigger;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONStreamAware;
 
