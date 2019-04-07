@@ -30,6 +30,7 @@ public enum APIEnum {
     /* ELASTIC SPECIFIC BEGIN */
     REDEEM("redeem", Redeem.instance),
     GET_UNCLAIMED_REDEEMS("getUnclaimedRedeems", GetUnclaimedRedeems.instance),
+    GET_FROM_FAUCET("faucet", Faucet.instance),
     /* ELASTIC SPECIFIC END */
 
     APPROVE_TRANSACTION("approveTransaction", ApproveTransaction.instance),

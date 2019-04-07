@@ -66,5 +66,4 @@ public interface Block {
     byte[] getBytes();
 
     JSONObject getJSONObject();
-
 }

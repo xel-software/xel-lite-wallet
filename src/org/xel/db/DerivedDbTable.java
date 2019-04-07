@@ -32,7 +32,7 @@ public abstract class DerivedDbTable {
 
     protected DerivedDbTable(String table) {
         this.table = table;
-        Nxt.getBlockchainProcessor().registerDerivedTable(this);
+        if(table!=null) Nxt.getBlockchainProcessor().registerDerivedTable(this);
     }
 
     public void rollback(int height) {

@@ -334,11 +334,11 @@ final class BlockDb {
                 try (ResultSet rs = pstmtSelect.executeQuery()) {
                     Db.db.commitTransaction();
                     while (rs.next()) {
-        	            pstmtDelete.setLong(1, rs.getLong("db_id"));
-            	        pstmtDelete.executeUpdate();
+                        pstmtDelete.setLong(1, rs.getLong("db_id"));
+                        pstmtDelete.executeUpdate();
                         Db.db.commitTransaction();
                     }
-	            }
+                }
                 BlockImpl lastBlock = findLastBlock();
                 lastBlock.setNextBlockId(0);
                 try (PreparedStatement pstmt = con.prepareStatement("UPDATE block SET next_block_id = NULL WHERE id = ?")) {

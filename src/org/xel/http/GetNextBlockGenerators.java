@@ -18,7 +18,6 @@ package org.xel.http;
 
 import org.xel.Block;
 import org.xel.Constants;
-import org.xel.Hub;
 import org.xel.Nxt;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -74,20 +73,6 @@ public final class GetNextBlockGenerators extends APIServlet.APIRequestHandler {
             limit = Integer.MAX_VALUE;
         }
 
-        Iterator<Hub.Hit> iterator = Hub.getHubHits(curBlock).iterator();
-        while (iterator.hasNext() && hubs.size() < limit) {
-            JSONObject hub = new JSONObject();
-            Hub.Hit hit = iterator.next();
-            hub.put("account", Long.toUnsignedString(hit.hub.getAccountId()));
-            hub.put("minFeePerByteNQT", hit.hub.getMinFeePerByteNQT());
-            hub.put("time", hit.hitTime);
-            JSONArray uris = new JSONArray();
-            uris.addAll(hit.hub.getUris());
-            hub.put("uris", uris);
-            hubs.add(hub);
-        }
-        
-        response.put("hubs", hubs);
         return response;
     }
 

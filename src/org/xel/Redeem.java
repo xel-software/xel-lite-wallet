@@ -26,6 +26,7 @@ import java.util.Objects;
 import org.xel.db.DbIterator;
 import org.xel.db.DbKey;
 import org.xel.db.VersionedEntityDbTable;
+import org.xel.util.Logger;
 
 public final class Redeem {
 
@@ -229,7 +230,7 @@ public final class Redeem {
        return "Hereby, I confirm to redeem "
                 + String.valueOf(nqt).replace("L", "") + " NQT-XEL from genesis entry "
                 + address + " to account "
-                + Long.toUnsignedString(receipient);
+                + Long.toUnsignedString(receipient) + ((Constants.isTestnet)?" (3.2.0 Brey Testnet)":"");
     }
 
     public static long getGuaranteedRedeemed(int height) {

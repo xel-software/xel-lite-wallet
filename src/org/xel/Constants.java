@@ -71,7 +71,8 @@ public final class Constants {
     public static final int MAX_PRUNABLE_LIFETIME;
     public static final boolean ENABLE_PRUNING;
     public static final int ALLOW_FAKE_FORGING_ON_REDEEM_UNTIL_BLOCK = 5000;
-
+    public static final long MAX_UPLOAD_SERVLET_LENGTH = 1024*48;
+    
     static {
         int maxPrunableLifetime = Nxt.getIntProperty("nxt.maxPrunableLifetime");
         ENABLE_PRUNING = maxPrunableLifetime >= 0;
@@ -86,13 +87,7 @@ public final class Constants {
     public static final int MAX_ACCOUNT_PROPERTY_VALUE_LENGTH = 160;
 
     public static final long MAX_ASSET_QUANTITY_QNT = 1000000000L * 100000000L;
-    public static final int MIN_ASSET_NAME_LENGTH = 3;
-    public static final int MAX_ASSET_NAME_LENGTH = 10;
-    public static final int MAX_ASSET_DESCRIPTION_LENGTH = 1000;
-    public static final int MAX_SINGLETON_ASSET_DESCRIPTION_LENGTH = 160;
-    public static final int MAX_ASSET_TRANSFER_COMMENT_LENGTH = 1000;
-    public static final int MAX_DIVIDEND_PAYMENT_ROLLBACK = 1441;
-
+    
     public static final int MAX_POLL_NAME_LENGTH = 100;
     public static final int MAX_POLL_DESCRIPTION_LENGTH = 1000;
     public static final int MAX_POLL_OPTION_LENGTH = 100;

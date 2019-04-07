@@ -71,7 +71,7 @@ final class BlockImpl implements Block {
         this.version = version;
         this.timestamp = timestamp;
         this.previousBlockId = previousBlockId;
-        if(this.previousBlockId==0)
+        if (this.previousBlockId == 0)
             this.height = 0;
 
         this.totalAmountNQT = totalAmountNQT;
@@ -101,7 +101,6 @@ final class BlockImpl implements Block {
         byte[] checksum = digest.digest();
         return checksum;
     }
-
 
     BlockImpl(int version, int timestamp, long previousBlockId, long totalAmountNQT, long totalFeeNQT, int payloadLength,
               byte[] payloadHash, long generatorId, byte[] generationSignature, byte[] blockSignature,

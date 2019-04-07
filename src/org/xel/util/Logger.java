@@ -94,7 +94,7 @@ public final class Logger {
                 throw new RuntimeException("Error loading logging properties", e);
             }
         }
-        log = org.slf4j.LoggerFactory.getLogger(Nxt.class);
+        log = org.slf4j.LoggerFactory.getLogger(org.xel.Nxt.class);
         enableStackTraces = Nxt.getBooleanProperty("nxt.enableStackTraces");
         enableLogTraceback = Nxt.getBooleanProperty("nxt.enableLogTraceback");
         logInfoMessage("logging enabled");

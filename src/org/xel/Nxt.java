@@ -73,7 +73,7 @@ public final class Nxt {
         System.out.println("User home folder " + dirProvider.getUserHomeDir());
         if (JUnitEnvironment.isJUnitTest()) {
             loadProperties(defaultProperties, NXT_DEFAULT_JUNIT_PROPERTIES, true);
-        }else{
+        } else {
             loadProperties(defaultProperties, NXT_DEFAULT_PROPERTIES, true);
         }
 
@@ -150,7 +150,7 @@ public final class Nxt {
                         System.out.printf("Creating dir %s\n", homeDir);
                         try {
                             Files.createDirectory(Paths.get(homeDir));
-                        } catch(Exception e) {
+                        } catch (Exception e) {
                             if (!(e instanceof NoSuchFileException)) {
                                 throw e;
                             }
@@ -178,7 +178,7 @@ public final class Nxt {
                     throw new IllegalArgumentException("Error loading " + propertiesFile, e);
                 }
             }
-        } catch(IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             e.printStackTrace(); // make sure we log this exception
             throw e;
         }
@@ -298,6 +298,8 @@ public final class Nxt {
 
     public static void main(String[] args) {
         try {
+            System.out.println("XEL CORE / XELINE IS OPEN-SOURCE SOFTWARE RUNNING ON THE MAIN-NET BUT IS STILL CONSIDERED \"BETA\" AND MAY CONTAIN BUGS, SOME OF WHICH MAY HAVE SERIOUS CONSEQUENCES. WE THEREFORE DISCLAIM ANY LIABILITY OF ANY KIND FOR ANY DAMAGES WHATSOEVER RESULTING DIRECTLY OR INDIRECTLY FROM THE USE OF THIS SOFTWARE OR OF ANY DERIVATIVE WORK. USE THE SOFTWARE AND THE INFORMATION PRESENTED HERE AT OUR OWN RISK.");
+            Thread.sleep(2000);
             Runtime.getRuntime().addShutdownHook(new Thread(Nxt::shutdown));
             init();
         } catch (Throwable t) {
@@ -315,7 +317,7 @@ public final class Nxt {
         Init.init();
     }
 
-    public static boolean isInitialized(){
+    public static boolean isInitialized() {
         return Init.initialized;
     }
 
@@ -353,7 +355,6 @@ public final class Nxt {
                 Account.init();
                 AccountRestrictions.init();
                 AccountLedger.init();
-                Hub.init();
                 Poll.init();
                 PhasingPoll.init();
                 Redeem.init();
@@ -383,6 +384,7 @@ public final class Nxt {
                 Logger.logMessage("Nxt server " + VERSION + " started successfully.");
                 Logger.logMessage("Copyright © 2013-2016 The Nxt Core Developers.");
                 Logger.logMessage("Copyright © 2016-2017 Jelurida IP B.V.");
+                Logger.logMessage("Copyright © 2019 XEL Development Team.");
                 Logger.logMessage("Distributed under GPLv2, with ABSOLUTELY NO WARRANTY.");
                 if (API.getWelcomePageUri() != null) {
                     Logger.logMessage("Client UI is at " + API.getWelcomePageUri());
@@ -391,16 +393,6 @@ public final class Nxt {
                 if (isDesktopApplicationEnabled()) {
                     launchDesktopApplication();
                 }
-
-                /*
-                String secretPhrase = Nxt.getStringProperty("nxt.forgingPassphrase", "", true);
-                if(secretPhrase != null && !secretPhrase.isEmpty())
-                {
-                  Logger.logMessage("Start forging with the account set in nxt.forgingPassphrase...");
-                  Generator.startForging(secretPhrase);
-                }
-                */
-
                 if (Constants.isTestnet) {
                     Logger.logMessage("RUNNING ON TESTNET - DO NOT USE REAL ACCOUNTS!");
                 }

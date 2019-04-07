@@ -49,10 +49,49 @@ public final class Convert {
 
     private Convert() {} //never
 
+    public static int swap (int value)
+    {
+        int b1 = (value >>  0) & 0xff;
+        int b2 = (value >>  8) & 0xff;
+        int b3 = (value >> 16) & 0xff;
+        int b4 = (value >> 24) & 0xff;
+
+        return b1 << 24 | b2 << 16 | b3 << 8 | b4 << 0;
+    }
+
+    public static byte[] int2byte(int[]src) {
+        int srcLength = src.length;
+        byte[]dst = new byte[srcLength << 2];
+
+        for (int i=0; i<srcLength; i++) {
+            int x = src[i];
+            int j = i << 2;
+            dst[j++] = (byte) ((x >>> 24) & 0xff);
+            dst[j++] = (byte) ((x >>> 16) & 0xff);
+            dst[j++] = (byte) ((x >>> 8) & 0xff);
+            dst[j++] = (byte) ((x) & 0xff);
+        }
+        return dst;
+    }
+
+    public static int[] byte2int(byte buf[]) {
+        int intArr[] = new int[buf.length / 4];
+        int offset = 0;
+        for(int i = 0; i < intArr.length; i++) {
+            intArr[i] = (buf[3 + offset] & 0xFF) | ((buf[2 + offset] & 0xFF) << 8) |
+                    ((buf[1 + offset] & 0xFF) << 16) | ((buf[0 + offset] & 0xFF) << 24);
+            offset += 4;
+        }
+        return intArr;
+    }
+
     public static byte[] parseHexString(String hex) {
         if (hex == null) {
             return null;
         }
+
+        hex = hex.toLowerCase();
+
         byte[] bytes = new byte[hex.length() / 2];
         for (int i = 0; i < bytes.length; i++) {
             int char1 = hex.charAt(i * 2);
@@ -152,6 +191,58 @@ public final class Convert {
 
     public static byte[][] nullToEmpty(byte[][] bytes) {
         return bytes == null ? EMPTY_BYTES : bytes;
+    }
+
+    public static byte[] nullToEmpty(byte[] bytes) {
+        return bytes == null ? EMPTY_BYTE : bytes;
+    }
+
+
+    public static byte[] truncate(byte[] b, int maxlen){
+        if(b.length==0) return b;
+        int firstIndex = 0;
+        if(b.length>maxlen){
+            firstIndex = b.length - maxlen;
+        }
+        int copylen = b.length-firstIndex;
+        byte[] r = new byte[copylen];
+        System.arraycopy(b, firstIndex, r, 0, copylen);
+        return r;
+    }
+
+    public static int bytesToInt(byte[] in){
+        in = truncate(in, 32);
+        int value = 0;
+        for (int i = 0; i < in.length; i++)
+        {
+            value += ((int) in[i] & 0xff) << (8 * i);
+        }
+        return value;
+    }
+    public static long bytesToLong(byte[] in){
+        in = truncate(in, 64);
+        long value = 0;
+        for (int i = 0; i < in.length; i++)
+        {
+            value += ((long) in[i] & 0xffL) << (8 * i);
+        }
+        return value;
+    }
+
+    public static byte[] pack(byte[] b, int fixedlen){
+        byte[] r = new byte[fixedlen];
+        if(b == null || b.length==0) return r;
+        int firstIndex = 0;
+        if(b.length>fixedlen){
+            firstIndex = b.length - fixedlen;
+        }
+        int copylen = b.length-firstIndex;
+        System.arraycopy(b, firstIndex, r, 0, copylen);
+        return r;
+    }
+
+    public static byte[] nullToEmptyPacked(byte[] bytes, int fixedlen) {
+        return pack( bytes, fixedlen);
     }
 
     public static long[] nullToEmpty(long[] array) {
@@ -315,4 +406,66 @@ public final class Convert {
         return o1.length - o2.length;
     };
 
+    public static byte[] toNoMatterSignedByteArray(BigInteger value) {
+        byte[] array = value.toByteArray();
+        if (array[0] == 0) {
+            array = Arrays.copyOfRange(array, 1, array.length);
+        }
+        return array;
+    }
+
+    public static int[] bigintToInts(BigInteger f) {
+        try {
+            byte[] byarr = toNoMatterSignedByteArray(f);
+            int numInts = (int) Math.ceil(1.0 * byarr.length / 4);
+            int rest = byarr.length % 4;
+            if (rest == 0) rest = 4;
+            int[] res = new int[numInts];
+            byte[] input = new byte[]{0,0,0,0};
+            for (int i = 0; i < numInts; ++i) {
+                if (i == 0) {
+                    // highest significant bits
+                    if(rest==1){
+                        input[3] = byarr[0];
+                    }else if(rest==2){
+                        input[2] = byarr[0];
+                        input[3] = byarr[1];
+                    }else if(rest==3){
+                        input[1] = byarr[0];
+                        input[2] = byarr[1];
+                        input[3] = byarr[2];
+                    }else if(rest==4){
+                        input[0] = byarr[0];
+                        input[1] = byarr[1];
+                        input[2] = byarr[2];
+                        input[3] = byarr[3];
+                    }
+                } else {
+                    // regular case
+                    input[0] = byarr[byarr.length-4*(numInts-i)];
+                    input[1] = byarr[byarr.length-4*(numInts-i)+1];
+                    input[2] = byarr[byarr.length-4*(numInts-i)+2];
+                    input[3] = byarr[byarr.length-4*(numInts-i)+3];
+
+                }
+                res[i] = Convert.byte2int(input)[0];
+            }
+            return res;
+        }catch(Exception e){
+            e.printStackTrace();
+            return new int[]{0, 0, 0, 0, 0, 0, 0, 0}; // some fallback value, should not be triggered anyway if things are coded well
+        }
+    }
+    public static int[] bigintToInts(BigInteger f, int min_length) {
+            int[] interm = bigintToInts(f);
+            int[] stretched = new int[min_length];
+            if(stretched.length>=interm.length){
+                int cntr = 0;
+                for(int i=interm.length-1;i>=0;i--){
+                    stretched[stretched.length-1-cntr] = interm[i];
+                    cntr++;
+                }
+            }
+            return stretched;
+    }
 }

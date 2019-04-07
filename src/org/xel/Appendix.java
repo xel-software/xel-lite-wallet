@@ -297,7 +297,7 @@ public interface Appendix {
 
     }
 
-    class PrunablePlainMessage extends Appendix.AbstractAppendix implements Prunable {
+    class PrunablePlainMessage extends AbstractAppendix implements Prunable {
 
         private static final String appendixName = "PrunablePlainMessage";
 

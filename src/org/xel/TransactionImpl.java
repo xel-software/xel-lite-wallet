@@ -18,6 +18,7 @@
 package org.xel;
 
 import org.xel.crypto.Crypto;
+import org.xel.db.DbIterator;
 import org.xel.db.DbKey;
 import org.xel.util.Convert;
 import org.xel.util.Filter;
@@ -28,6 +29,9 @@ import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.security.MessageDigest;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.*;
 
 final class TransactionImpl implements Transaction {

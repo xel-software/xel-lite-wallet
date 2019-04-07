@@ -1130,7 +1130,7 @@ final class BlockchainProcessorImpl implements BlockchainProcessor {
     @Override
     public void registerDerivedTable(DerivedDbTable table) {
         if (alreadyInitialized) {
-            throw new IllegalStateException("Too late to register table " + table + ", must have done it in Nxt.Init");
+            throw new IllegalStateException("Too late to register table " + table + ", must have done it in org.xel.Init");
         }
         derivedTables.add(table);
     }
@@ -1634,7 +1634,7 @@ final class BlockchainProcessorImpl implements BlockchainProcessor {
                     if (transaction.getTimestamp() > fromTimestamp) {
                         for (Appendix.AbstractAppendix appendage : transaction.getAppendages(true)) {
                             if ((appendage instanceof Appendix.Prunable) &&
-                                        !((Appendix.Prunable)appendage).hasPrunableData()) {
+                                    !((Appendix.Prunable)appendage).hasPrunableData()) {
                                 synchronized (prunableTransactions) {
                                     prunableTransactions.add(transaction.getId());
                                 }
