@@ -18,6 +18,7 @@ package nxt;
 
 import org.bitcoinj.params.MainNetParams;
 
+import java.math.BigInteger;
 import java.util.Calendar;
 import java.util.TimeZone;
 
@@ -36,9 +37,11 @@ public final class Constants {
     public static final long ONE_NXT  =  100000000;
     public static final long TENTH_NXT = 10000000;
     public static final long MAX_BALANCE_NQT = MAX_BALANCE_NXT * ONE_NXT;
-    public static final long INITIAL_BASE_TARGET = 1537228670L;
+
+    public static final int BLOCK_TIME = 60;
+    //public static final long INITIAL_BASE_TARGET = 1537228670L;
+    public static final long INITIAL_BASE_TARGET = BigInteger.valueOf(2).pow(63).divide(BigInteger.valueOf(BLOCK_TIME * MAX_BALANCE_NXT)).longValue(); //1537228670;
     public static final long MAX_BASE_TARGET = MAX_BALANCE_NXT * INITIAL_BASE_TARGET;
-    public static final long MAX_BASE_TARGET_2 = isTestnet ? MAX_BASE_TARGET : INITIAL_BASE_TARGET * 50;
     public static final long MIN_BASE_TARGET = INITIAL_BASE_TARGET * 9 / 10;
     public static final int MIN_BLOCKTIME_LIMIT = 53;
     public static final int MAX_BLOCKTIME_LIMIT = 67;
@@ -163,8 +166,8 @@ public final class Constants {
     // LAST_KNOWN_BLOCK must also be set in html/www/js/nrs.constants.js
     public static final int LAST_KNOWN_BLOCK = CHECKSUM_BLOCK_GENESIS;
 
-    public static final int[] MIN_VERSION = new int[] {3, 1, 0};
-    public static final int[] MIN_PROXY_VERSION = new int[] {3, 1, 0};
+    public static final int[] MIN_VERSION = new int[] {3, 1, 2};
+    public static final int[] MIN_PROXY_VERSION = new int[] {3, 1, 2};
 
     static final long UNCONFIRMED_POOL_DEPOSIT_NQT = (isTestnet ? 50 : 100) * TENTH_NXT;
 
