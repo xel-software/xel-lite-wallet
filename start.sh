@@ -22,7 +22,7 @@ else
     JAVA=java
 fi
 echo "About to start elastic in the background, call stop.sh to stop it again"
-nohup ${JAVA} -cp xel-lite-wallet.jar:conf -Dnxt.runtime.mode=desktop nxt.Nxt > /dev/null 2>&1 &
+nohup ${JAVA} ${JAVA_OPTS} -cp xel-lite-wallet.jar:conf -Dnxt.runtime.mode=desktop nxt.Nxt > /dev/null 2>&1 &
 
 echo $! > ~/.elastic/elastic.pid
 cd - > /dev/null
