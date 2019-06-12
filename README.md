@@ -61,7 +61,7 @@ check the dedicated git project : https://github.com/xel-software/xel-installer-
 ----
 ## 故障排除 (XEL相关软件)
 
-  - 如果关闭XEL服务?
+  - 如何关闭XEL服务？
     - 点击XEL关闭按钮, 或者运行 `./stop.sh`
     - 如果通过命令行运行, ctrl+c 或者关闭控制台
 
