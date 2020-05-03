@@ -144,9 +144,8 @@ public class TransactionalDb extends BasicDb {
                     statsTime = now;
                 }
             }
-            if (logStats)
-                Logger.logDebugMessage(String.format("Average database transaction time is %.3f seconds",
-                                                     (double)times/1000.0/(double)count));
+            //if (logStats)
+            //    Logger.logDebugMessage(String.format("Average database transaction time is %.3f seconds", (double)times/1000.0/(double)count));
         }
         DbUtils.close(con);
     }

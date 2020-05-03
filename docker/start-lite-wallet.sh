@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /xel-lite-wallet
+#cd /xel-lite-wallet
 
 echo "set config..."
 
