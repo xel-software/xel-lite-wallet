@@ -1,14 +1,31 @@
-FROM maven:3-jdk-13-alpine
-ENV DEBIAN_FRONTEND noninteractive
-ENV ELASTIC_DIR=/xel-lite-wallet
+#
+# Source code
+#
+FROM alpine/git as sources
 
-RUN apk add dos2unix git
+RUN git clone --depth 1 https://github.com/xel-software/xel-lite-wallet /code
 
-RUN git clone --depth 1 https://github.com/xel-software/xel-lite-wallet ${ELASTIC_DIR}
-RUN cd ${ELASTIC_DIR} && mvn package
+#
+# Maven build
+#
+FROM maven:3.6.3-adoptopenjdk-11 as build
 
-COPY start-lite-wallet.sh ${ELASTIC_DIR}/start-lite-wallet.sh
-RUN dos2unix ${ELASTIC_DIR}/start-lite-wallet.sh
+COPY --from=sources /code/ /build/
 
-WORKDIR ${ELASTIC_DIR}
-ENTRYPOINT sh start-lite-wallet.sh
+RUN cd /build && mvn package
+
+#
+# Final image
+#
+FROM adoptopenjdk:11-jre-openj9-bionic
+RUN mkdir /opt/app
+
+COPY --from=build /build/xel-lite-wallet.jar /opt/app/xel-lite-wallet.jar
+COPY --from=sources /code/docker/start-lite-wallet.sh /opt/app/start-lite-wallet.sh
+COPY --from=sources /code/run.sh /opt/app/run.sh
+COPY --from=sources /code/conf/ /opt/app/conf/
+COPY --from=sources /code/html/ /opt/app/html/
+COPY --from=sources /code/logs/ /opt/app/logs/
+
+WORKDIR /opt/app
+ENTRYPOINT bash start-lite-wallet.sh
